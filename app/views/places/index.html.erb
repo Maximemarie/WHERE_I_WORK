@@ -6,13 +6,41 @@ Different sorting functions like alphabetically or by distance
 And various filters like distance, rating, other things.
 
 Ideally, it will have a list view and a map view-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Where I work</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-<div class="container my-2">
-  <div class="row">
-    <div id="places" data-insert-in-list-target="items" class= "cards">
-        <% @places.each do |place| %>
-          <%= render place %>
-        <% end %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <div class="row justify-content-center">
+    <div class="col-sm-8 my-3">
+      <%= form_with url: places_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find your dream monument..."
+          %>
+        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <% end %>
     </div>
   </div>
-</div>
+  <div class="container my-2">
+    <div class="row">
+      <div id="places" data-insert-in-list-target="items" class= "cards">
+          <% @places.each do |place| %>
+            <%= render place %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+```
+```
