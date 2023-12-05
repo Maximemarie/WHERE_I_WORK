@@ -14,8 +14,4 @@ class User < ApplicationRecord
   has_many :places, through: :bookings
   # A user has one attached photo
   has_one_attached :photo
-  # A user validates name, email and password
-  validates :name, presence: true
-  validates :email, presence: true
-  validates :password, presence: true
 end
