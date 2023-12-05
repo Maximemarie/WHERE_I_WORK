@@ -1,0 +1,52 @@
+
+<!--This is the place card partial
+We can use it to render a card of a particular place wherever we want
+This will be especially used on the index page
+But also other places, like Upcoming Reservation
+
+It will have a picture of the place
+Important details like name, description, location, rating, opening hour
+Availability
+Distance from you
+And have buttons
+Linking to the show page
+to the make-a-reservation page
+And to the menu
+And others-->
+
+<div class="container" >
+
+    <div>
+      <p>
+      <strong></strong>
+      <%= place.name.capitalize %>
+      </p>
+    </div>
+
+    <!-- <div>
+      Image code
+    </div> -->
+
+   <div>
+      <p>
+        <strong>Location:</strong>
+        <%= place.location  %>
+      </p>
+
+      <p>
+        <strong>Description:</strong>
+        <%= place.description %>
+      </p>
+
+      <p>
+        <strong>Rating:</strong>
+        <%= place.rating %>
+      </p>
+
+      <p>
+        <%= link_to "Find out more", place, class:"info" %>
+      </p>
+   </div>
+
+  </div>
+</div>
