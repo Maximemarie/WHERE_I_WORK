@@ -1,1 +1,18 @@
 places index
+
+<!--This page will be the index of all the place
+It will have a search bar to search for particular names
+Different sorting functions like alphabetically or by distance
+And various filters like distance, rating, other things.
+
+Ideally, it will have a list view and a map view-->
+
+<div class="container my-2">
+  <div class="row">
+    <div id="places" data-insert-in-list-target="items" class= "cards">
+        <% @places.each do |place| %>
+          <%= render place %>
+        <% end %>
+    </div>
+  </div>
+</div>
