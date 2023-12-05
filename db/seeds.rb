@@ -10,7 +10,7 @@
 
 puts "Cleaning database..."
 Place.destroy_all
-
+User.destroy_all
 
 puts "Creating places.."
 

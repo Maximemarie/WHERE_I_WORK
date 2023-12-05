@@ -9,6 +9,6 @@ class Place < ApplicationRecord
   has_many :bookings
   # It validates name, address and description
   validates :name, presence: true
-  validates :address, presence: true
+  validates :location, presence: true
   validates :description, presence: true
 end
