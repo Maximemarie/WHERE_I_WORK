@@ -15,7 +15,7 @@ class PlacesController < ApplicationController
 
   private
 
-  def monument_params
+  def places_params
     params.require(:place).permit(:name,:location,:description,:rating)
   end
 end
