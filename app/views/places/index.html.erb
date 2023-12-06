@@ -4,37 +4,30 @@
 to search for particular names. Different sorting functions like alphabetically
 or by distance and various filters like distance, rating, other things.-->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Where I work</title>
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-</head>
-
-<body>
+<%# This is the home page %>
 
   <%= render "header" %>
 
-  <h1>Good Morning, name...</h1>
-  <div class="row justify-content-center">
-    <div class="col-sm-8 my-3">
-      <%= form_with url: places_path, method: :get, class: "d-flex" do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find the best place to work..."
-          %>
-        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-      <% end %>
+  <h1>Good Morning,
+  name...</h1>
+  <div class = "search">
+    <div class="row justify-content-center">
+      <div class="col-sm-8 my-3">
+        <%= form_with url: places_path, method: :get, class: "d-flex formsearch" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            placeholder: "Find your happy place..."
+            %>
+          <%=image_submit_tag "loupe.png", name: "", class: "btn_search" %>
+        <% end %>
+      </div>
     </div>
   </div>
 
   <!-- This is where the List view starts -->
+=======
+
+  <!-- This where the List view starts -->
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
       <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
@@ -64,8 +57,3 @@ or by distance and various filters like distance, rating, other things.-->
 
 
   </div>
-
-   <%= render "navbar" %>
-
-</body>
-</html>

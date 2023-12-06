@@ -4,13 +4,15 @@ some pages. We have at least two different headers.-->
 <!-- In this page there is the logo of WIW and a rounded profile page with a picture of you as a user.
 This header has the same colour as the overall app background-->
 
-<div class= "header">
-  <div class="container">
-    <div class="row">
-      <div class="col-6">
-        <img src="images/logo.png" alt="logo" class="logo">
-        <img class="profile-picture" src="images/profile-picture.jpg" alt="Profile Picture">
-      </div>
-    </div>
+<div class = "header">
+  <div class = "container d-flex justify-content-between">
+    <%# <div class ="row"> %>
+      <%# <div class = "col-6"> %>
+      <div class= "empty-image"></div>
+    <%= image_tag "logo.png", class:"logo"%>
+    <%= image_tag "leane.jpg", class:"image"%>
+
+      <%# </div> %>
+    <%# </div> %>
   </div>
 </div>
