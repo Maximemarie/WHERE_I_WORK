@@ -1,13 +1,57 @@
-place show page
+<!-- this page is the show page of the index, you arrive on this page when you
+click on a place. The purpose of this page is to see more details about the place
+you will book-->
 
-<div>
-  <%= @place.name %>
-</div>
-<div>
-  <%= @place.location %>
-</div>
+<%# Path: app/views/places/show.html.erb %>
 
-<div>
-<!--Here is the link to the bookings page-->
-<%= link_to "Book!", new_place_booking_path(@place) %>
+
+  <form>
+  <input type="button" value="Go back!" onclick="history.back()">
+  </form><%= render "header"%>
+
+<br>
+  <div>
+    <div>@
+      <%= @place.name %>
+    </div>
+    <div>
+      <%= @place.location %>
+    </div>
+    <div>
+      <%= @place.description %>
+    </div>
+
+    <div>
+      <%= @place.rating %>
+    </div>
+
+  <div>
+  <!--Here is the link to the bookings page-->
+
+  <div class="d-flex">
+    <%= link_to "Make a reservation", new_place_booking_path(@place) %>
+    <!-- Button trigger modal -->
+    <button data-bs-toggle="modal" data-bs-target="#exampleModal">
+      See Menu
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
