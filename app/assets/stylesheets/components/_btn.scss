@@ -1,0 +1,43 @@
+.btn1{ //For the Apply, See Menu, My review page;
+  background-color: #343633;
+  color:white;
+  text-align: center;
+  font-family: Public Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  // text-decoration-line: underline;
+  width: 118px;
+  height: 41px;
+}
+
+.btn2{ // For the map and list btn
+  background-color: #343633;
+  color:white;
+  text-align: center;
+  font-family: Public Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  width: 204px;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.pp_btn{
+  border-radius: 55px;
+  border: 1px solid#343633;
+
+}
+
+.return_btn{ // to go back the other page;
+  border-radius:50px;
+  background-color: #343633;
+  width: 46px;
+  height: 46px;
+}
