@@ -3,3 +3,11 @@ place show page
 <div>
   <%= @place.name %>
 </div>
+<div>
+  <%= @place.location %>
+</div>
+
+<div>
+<!--Here is the link to the bookings page-->
+<%= link_to "Book!", new_place_booking_path(@place) %>
+</div>

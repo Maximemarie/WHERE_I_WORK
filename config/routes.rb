@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :places, only: [:index, :show] do
-    resources :bookings, only: [:new, :create, :show, :destroy]
+    resources :bookings, only: [:new, :create, :destroy]
   end
+  resources :bookings, only: [:index, :update]
 end
