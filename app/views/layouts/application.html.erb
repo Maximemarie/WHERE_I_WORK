@@ -12,10 +12,11 @@
   </head>
  <body>
     <%= render "shared/flashes" %>
-
-    <%= yield %>
-
-    <%= render "shared/navbar" %>
-
+    <div class = " <%= controller_name=="places" && action_name == "show" ?  "backgroundshow" :  "content-wrapper" %>">
+      <%= yield %>
+    </div>
+    <% unless controller_name=="places" && action_name == "show" %>
+     <%= render "shared/navbar" %>
+    <% end %>
   </body>
 </html>

@@ -40,11 +40,12 @@ And others-->
           <strong>Description:</strong>
           <%= place.description %>
         <%# </p> % %>
-
-        <p class = "card-place-rate">
-          <%= place.rating %>
-        </p>
-        <%= image_tag "etoile.png", class:"logo"%>
+        <div class = "Rating">
+          <p class = "card-place-rate">
+            <%= place.rating %>
+          </p>
+          <%= image_tag "etoile.png", class:"logo"%>
+        </div>
         <%# <p>
           <%= link_to "Find out more", place, class:"info" %>
         <%# </p> %>
