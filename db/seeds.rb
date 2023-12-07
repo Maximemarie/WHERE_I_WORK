@@ -25,4 +25,8 @@ cafeloca.save!
 caferock = Place.new(id: 556, name: "Cafe Rock", description: "A rocking cafe", location: "49 Saint Bernard St", rating: 3, contact_details: "554-664-7774")
 caferock.save!
 
+puts "Creating Test Favorites"
+
+testFav = Favorite.new(id: 1, place_id: 556, user_id: 2)
+
 puts "Done !"
