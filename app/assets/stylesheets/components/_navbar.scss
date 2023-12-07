@@ -21,6 +21,9 @@ $navbar-height: 67px;
   flex-shrink: 0;
   border-radius: 50px;
   background: var(--Color-5, #343633);
+  position: fixed;
+  bottom: 0;
+  margin-left: 12px;
 
   .icon{
     width: 34px;
