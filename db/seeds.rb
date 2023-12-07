@@ -12,6 +12,11 @@ puts "Cleaning database..."
 Place.destroy_all
 User.destroy_all
 
+puts "Creating users..."
+
+testUser = User.new(id: 2, email: "test@test.com" , password: 123456)
+testUser.save!
+
 puts "Creating places.."
 
 cafeloca = Place.new(id: 33, name: "Cafe Loca", description: "A crazy cool cafe", location: "373 Avenue du Mont-Royal E, H2T1R1, Montreal", rating: 4, contact_details: "555-666-7777")

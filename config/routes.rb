@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
   resources :places, only: [:index, :show] do
     resources :bookings, only: [:new, :create, :destroy]
+    resource :favorites, only: [:create, :destroy]
   end
   resources :bookings, only: [:index, :update]
+
+
 end
