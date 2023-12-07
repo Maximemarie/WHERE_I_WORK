@@ -11,11 +11,13 @@
 //   width: 40px;
 // }
 
+$navbar-height: 67px;
+
 .navigation-bar{
   margin: auto;
   margin-bottom: 5px;
   width: 351px;
-  height: 67px;
+  height: $navbar-height;
   flex-shrink: 0;
   border-radius: 50px;
   background: var(--Color-5, #343633);

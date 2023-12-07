@@ -28,5 +28,6 @@ caferock.save!
 puts "Creating Test Favorites"
 
 testFav = Favorite.new(id: 1, place_id: 556, user_id: 2)
+testFave.save!
 
 puts "Done !"
