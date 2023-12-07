@@ -10,3 +10,9 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "pages/detail-place";
+
+.content-wrapper {
+  height: calc(100vh - #{$navbar-height});
+  overflow: auto;
+}

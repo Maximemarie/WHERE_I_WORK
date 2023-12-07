@@ -8,8 +8,7 @@ or by distance and various filters like distance, rating, other things.-->
 
   <%= render "header" %>
 
-  <h1>Good Morning,
-  name...</h1>
+  <h1>Good Morning,<br>Léane...</h1>
   <div class = "search">
     <div class="row justify-content-center">
       <div class="col-sm-8 my-3">
@@ -50,6 +49,9 @@ or by distance and various filters like distance, rating, other things.-->
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <div class="container my-2">
           <% @places.each do |place| %>
+            <%= render place %>
+          <% end %>
+                    <% @places.each do |place| %>
             <%= render place %>
           <% end %>
         </div>

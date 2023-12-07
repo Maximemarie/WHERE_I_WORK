@@ -6,12 +6,12 @@ body{
 h1{
   color:#1C1C1C;
 font-family: Playfair Display;
-font-size: 30px;
+font-size: 28px;
 font-style: normal;
 font-weight: 800;
 line-height: normal;
 margin-left: 15px;
-margin-top: 10px;
+// margin-top: 7px;
 }
 
 h2{
@@ -26,7 +26,7 @@ margin-left: 15px;
 }
 .Card-place{
   margin: auto;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 10px;
   display: flex;
   width: 350px;
@@ -46,7 +46,7 @@ margin-left: 15px;
       word-wrap: break-word;
       color: var(--White, #FFF);
       font-family: Playfair Display;
-      font-size: 26px;
+      font-size: 28px;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
@@ -55,19 +55,25 @@ margin-left: 15px;
 
     }
 
+    .Rating{
+      text-align: end;
+    }
     .card-place-rate{
       color: var(--White, #FFF);
       position: absolute;
       right: 10px;
       top: 5px;
       width: 40px;
+      font-size: 17px;
+      padding-right: 22px;
+      padding-top: 3px;
     }
 
     .logo{
       left: 323px;
       position: absolute;
       right: 16px;
-      top: 3px;
+      top: -7px;
       width: 17px;
       height: 17px;
 
