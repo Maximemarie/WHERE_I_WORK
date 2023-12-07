@@ -1,1 +1,26 @@
 bookings show page
+
+
+<h2> Your confirmation: </h2>
+ <div>
+    <p>
+      <%= @booking.date %>
+    </p>
+    <p>
+      <%= @booking.time %>
+    </p>
+    <p>
+      at
+    </p>
+    <p>
+      <%= @booking.place.location %>
+    </p>
+  </div>
+
+  <div>
+    <p>
+      Please note that your reservation will be valid for 45 minutes on the selected date.
+    </p>
+  </div>
+
+  <h2>We can't wait to see you !</h2>

@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_place, except: [ :destroy, :index ]
+  before_action :set_place, except: [ :destroy, :index, :show]
 
   def index
     @bookings = Booking.all
@@ -11,8 +11,9 @@ class BookingsController < ApplicationController
     @booking.status = "pending"
     @booking.user_id = current_user.id
     if @booking.save
-      redirect_to bookings_path
+      redirect_to booking_path(@booking)
       # it should redirect to the show booking page
+      raise
     else
       render :new, status: :unprocessable_entity
     end
@@ -24,9 +25,13 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    @booking = Boooking.find(params[:id])
+    @booking = Booking.find(params[:id])
     @booking.destroy
     redirect_to place_path(@booking.place), status: :see_other
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
   end
 
   private
