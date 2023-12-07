@@ -20,4 +20,7 @@ cafeloca.save!
 caferock = Place.new(id: 556, name: "Cafe Rock", description: "A rocking cafe", location: "49 Saint Bernard St", rating: 3, contact_details: "554-664-7774")
 caferock.save!
 
+cafetomy = Place.new(id: 56, name: "Cafe Tommy", description: "A nice café", location: "49 Saint Bernard St", rating: 3, contact_details: "554-664-7774")
+cafetomy.save!
+
 puts "Done !"
