@@ -24,33 +24,34 @@ or by distance and various filters like distance, rating, other things.-->
     </div>
   </div>
 
-  <!-- This is where the List view starts -->
-=======
+
+
 
   <!-- This where the List view starts -->
-  <ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
-        type="button" role="tab" aria-controls="home" aria-selected="true">List</button>
-    </li>
 
-  <!-- This is where the Map view starts -->
+  <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
-        type="button" role="tab" aria-controls="profile" aria-selected="false">Map</button>
-    </li>
-  </ul>
 
-    <div class="tab-content" id="myTabContent"> <!-- This is the content inside the List view -->
+          <button class= "btn2 btn2-left" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+            type="button" role="tab" aria-controls="home" aria-selected="true">List</button>
+        </li>
+
+      <!-- This is where the Map view starts -->
+        <li class="nav-item" role="presentation">
+          <button class="btn2 btn2-right" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+            type="button" role="tab" aria-controls="profile" aria-selected="false">Map</button>
+        </li>
+      </ul>
+
+<h2>Coffee Places</h2>
+<!-- This is the content inside the List view -->
+
+    <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <div class="container my-2">
-          <div class="row">
-            <div id="places" data-insert-in-list-target="items" class= "cards">
-                <% @places.each do |place| %>
-                  <%= render place %>
-                <% end %>
-            </div>
-          </div>
+          <% @places.each do |place| %>
+            <%= render place %>
+          <% end %>
         </div>
       </div>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Tab 2</div>
