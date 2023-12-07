@@ -2,6 +2,12 @@
 body{
   background-color: #EBE3D5;
 }
+.headerbloc{
+  position: sticky;
+    background-color: #EBE3D5;
+    display: block;
+    top: 0;
+}
 
 h1{
   color:#1C1C1C;
@@ -29,18 +35,18 @@ margin-left: 15px;
   margin-top: 5px;
   margin-bottom: 10px;
   display: flex;
-  width: 350px;
+  width: 95%;
   height: 140px;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  position: relative;
+
 
 
   .card-info{
-
+    position: relative;
     .card-place-name{
       margin: auto;
       word-wrap: break-word;

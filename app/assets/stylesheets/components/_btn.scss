@@ -59,6 +59,9 @@ padding-top: 7px;
   height: 55px;
   margin-top: 10px;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   input{
     color: white;
@@ -69,5 +72,6 @@ padding-top: 7px;
     text-align: center;
     background: transparent;
     border: none;
+    margin: 0px;
   }
 }
