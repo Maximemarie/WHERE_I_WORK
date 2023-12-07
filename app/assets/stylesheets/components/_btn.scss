@@ -22,21 +22,23 @@
   line-height: normal;
   display: flex;
   width: auto;
-  width: 70px;
+  width: 80px;
   height: 36px;
   justify-content: center;
   flex-shrink: 0;
   border: none;
 text-align: center;
+margin-top: 15px;
 
   &.btn2-left{
-    border-top-left-radius:10px ;
-    border-bottom-left-radius:10px ;
+    border-top-left-radius:30px ;
+    border-bottom-left-radius:30px ;
+
   }
 
   &.btn2-right{
-    border-top-right-radius:10px ;
-    border-bottom-right-radius:10px ;
+    border-top-right-radius:30px ;
+    border-bottom-right-radius:30px ;
   }
 
 

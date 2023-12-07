@@ -21,7 +21,7 @@ font-size: 24px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
-margin-top: 10px;
+margin-top: 15px;
 margin-left: 15px;
 }
 .Card-place{
@@ -43,7 +43,7 @@ margin-left: 15px;
 
     .card-place-name{
       margin: auto;
-
+      word-wrap: break-word;
       color: var(--White, #FFF);
       font-family: Playfair Display;
       font-size: 26px;
@@ -51,22 +51,40 @@ margin-left: 15px;
       font-weight: 700;
       line-height: normal;
       text-align: center;
+      align-items: center;
 
     }
 
-    .card-place-location{
-    flex-direction: column;
-    justify-content: baseline;
-    flex-shrink: 0;
-    display: flex;
-    color: #FFF;
-    font-family: Public Sans;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 0px;
-    position: absolute;
+    .card-place-rate{
+      color: var(--White, #FFF);
+      position: absolute;
+      right: 10px;
+      top: 5px;
+      width: 40px;
+    }
+
+    .logo{
+      left: 323px;
+      position: absolute;
+      right: 16px;
+      top: 3px;
+      width: 17px;
+      height: 17px;
 
     }
+    // .card-place-location{
+    // flex-direction: column;
+    // justify-content: baseline;
+    // flex-shrink: 0;
+    // display: flex;
+    // color: #FFF;
+    // font-family: Public Sans;
+    // font-size: 15px;
+    // font-weight: 400;
+    // line-height: 0px;
+    // position: absolute;
+
+    // }
 
 
 
