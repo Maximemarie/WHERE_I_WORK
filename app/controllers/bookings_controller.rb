@@ -7,9 +7,11 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.place = @booking
+    @booking.place = @place
+    @booking.status = "pending"
+    @booking.user_id = current_user.id
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to bookings_path
       # it should redirect to the show booking page
     else
       render :new, status: :unprocessable_entity
@@ -18,6 +20,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @place
   end
 
   def destroy
