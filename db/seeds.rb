@@ -14,7 +14,7 @@ User.destroy_all
 
 puts "Creating places.."
 
-cafeloca = Place.new(id: 33, name: "Cafe Loca", description: "A crazy cool cafe", location: "36 Farrow St", rating: 4, contact_details: "555-666-7777")
+cafeloca = Place.new(id: 33, name: "Cafe Loca", description: "A crazy cool cafe", location: "373 Avenue du Mont-Royal E, H2T1R1, Montreal", rating: 4, contact_details: "555-666-7777")
 cafeloca.save!
 
 caferock = Place.new(id: 556, name: "Cafe Rock", description: "A rocking cafe", location: "49 Saint Bernard St", rating: 3, contact_details: "554-664-7774")

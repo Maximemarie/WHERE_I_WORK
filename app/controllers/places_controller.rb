@@ -7,6 +7,13 @@ class PlacesController < ApplicationController
       sql_subquery = "name ILIKE :query OR location  ILIKE :query"
       @places = @places.where(sql_subquery, query: "%#{params[:query]}%")
     end
+    # The `geocoded` scope filters only flats with coordinates
+    @markers = @places.geocoded.map do |place|
+      {
+        lat: place.latitude,
+        lng: place.longitude
+      }
+    end
   end
 
   def show
