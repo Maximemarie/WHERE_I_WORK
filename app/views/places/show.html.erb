@@ -25,6 +25,14 @@ you will book-->
       <%= @place.rating %>
     </div>
 
+<%= #if @favorite.place_id.user_id = current_user.id class = bttn_heart_on (which colors it in and disables it) %>
+    <div>
+      <%= link_to "Favorite",
+          place_favorites_path(@place),
+          data: {turbo_method: :post}
+        %>
+    </div>
+
 
   <!--Here is the link to the bookings page-->
 
