@@ -1,7 +1,7 @@
 // .header{ It's only for the page who has the logo and the profile picture
    .logo{
-    margin-top: 10px;
-    width: 102px;
+    margin-top: 20px;
+    width: 110px;
     height: 32px;
     flex-shrink: 0;
    }
@@ -10,7 +10,8 @@
    }
    .image{
     margin-top: 10px;
-    height: 50px;
-    width: 50px;
+    height: 55px;
+    width: 55px;
     border-radius: 50%;
+    border: 1px solid #343633
    }
