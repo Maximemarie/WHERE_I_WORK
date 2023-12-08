@@ -5,9 +5,10 @@ you will book-->
 <%# Path: app/views/places/show.html.erb %>
 
 
-  <%# <form class= "return_btn"> %>
+  <% #<form class= "return_btn"> %>
 
-  </form><%= render "headerphoto+return"%>
+  </form>
+  <%= render "headerphoto_return"%>
 
       <%# <br> %>
     <div class = "cardinfo" >
@@ -42,7 +43,10 @@ you will book-->
       </div>
 
 
- <%= #if @favorite.place_id.user_id = current_user.id class = bttn_heart_on (which colors it in and disables it) %>
+
+
+<%# if @favorite.place_id.user_id = current_user.id class = bttn_heart_on (which colors it in and disables it) %>
+
     <div>
       <%= link_to "Favorite",
           place_favorites_path(@place),
@@ -52,7 +56,7 @@ you will book-->
 
     <div>
       <%= link_to "Leave a Review",
-          new_place_review_path(@place)
+          new_place_reviews_path(@place)
         %>
     </div>
 
