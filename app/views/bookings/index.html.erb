@@ -1,1 +1,16 @@
 bookings index
+
+ <div class="container my-2">
+      <% @bookings.each do |booking| %>
+
+        <p>
+         Your booking is on: <%= booking.date %>
+        </p>
+        <p>
+          At: <%= booking.time %>
+        </p>
+        <p>
+          For: <%= booking.place.name %>
+        </p>
+      <% end %>
+</div>
