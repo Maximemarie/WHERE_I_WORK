@@ -23,57 +23,64 @@ or by distance and various filters like distance, rating, other things.-->
         <% end %>
 
 
+
   </div>
-
-
-
+</div>
 
   <!-- This where the List view starts -->
+<ul class="nav nav-tabs justify-content-center border-0" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button
+      class= "nav-link active btn2 btn2-left"
+      id="home-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#home"
+      type="button"
+      role="tab"
+      aria-controls="home"
+      aria-selected="true"
+    >
+      List
+    </button>
+  </li>
 
-  <ul class="nav nav-tabs justify-content-center border-0" id="myTab" role="tablist">
-    <li class="nav-item" role="presentation">
-
-          <button class= "btn2 btn2-left" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
-            type="button" role="tab" aria-controls="home" aria-selected="true">List</button>
-        </li>
-
-      <!-- This is where the Map view starts -->
-        <li class="nav-item" role="presentation">
-          <button class="btn2 btn2-right" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
-            type="button" role="tab" aria-controls="profile" aria-selected="false">Map</button>
-        </li>
-      </ul>
+  <!-- This is where the Map view starts -->
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link btn2 btn2-right"
+      id="profile-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#profile"
+      type="button"
+      role="tab"
+      aria-controls="profile"
+      aria-selected="false"
+    >
+      Map
+    </button>
+  </li>
+</ul>
 
   </div>
 <%# <h2>Coffee Places</h2> %>
 
 <!-- This is the content inside the List view -->
 
-  <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-        <div class="container my-2">
-          <% @places.each do |place| %>
-            <%= render place %>
-          <% end %>
-
-           <% @places.each do |place| %>
-            <%= render place %>
-          <% end %>
-
-           <% @places.each do |place| %>
-            <%= render place %>
-          <% end %>
-
-           <% @places.each do |place| %>
-            <%= render place %>
-          <% end %>
-
-           <% @places.each do |place| %>
-            <%= render place %>
-          <% end %>
-        </div>
-      </div>
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Tab 2</div>
-
-
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <div class="container my-2">
+      <% @places.each do |place| %>
+        <%= render place %>
+      <% end %>
+    </div>
   </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <!-- This is the content inside the Map view -->
+    <div style="width: 351px; height: 511px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+    >
+    </div>
+  </div>
+</div>

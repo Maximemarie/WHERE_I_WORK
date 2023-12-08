@@ -4,6 +4,6 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :place
   # It validates start_date and end_date
-  validates :start_date, presence: true
-  validates :end_date, presence: true
+  validates :date, presence: true
+  validates :time, presence: true
 end
