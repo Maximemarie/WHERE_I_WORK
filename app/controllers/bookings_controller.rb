@@ -13,7 +13,6 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to booking_path(@booking)
       # it should redirect to the show booking page
-      raise
     else
       render :new, status: :unprocessable_entity
     end
