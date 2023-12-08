@@ -14,41 +14,31 @@ to the make-a-reservation page
 And to the menu
 And others-->
 
-<div class="row">
+<%# <div class="row"> %>
   <div class= "Card-place" style= "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(assets/tommy.jpg)">
     <div data-insert-in-list-target="items" class= "cards">
+
+
       <div class="card-info">
+
         <div>
           <p class = "card-place-name">
-            <%= place.name.capitalize %>
+          <%= place.name.capitalize %>
           </p>
         </div>
 
-        <!-- <div>
-          Image code
-        </div> -->
 
-      <%# <div>
-        <p class = "card-place-location">
 
-          <%= place.location  %>
-        <%# </h3>  %>
-
-        <%# <p>
-          <strong>Description:</strong>
-          <%= place.description %>
-        <%# </p> % %>
         <div class = "Rating">
           <p class = "card-place-rate">
             <%= place.rating %>
           </p>
           <%= image_tag "etoile.png", class:"logo"%>
         </div>
-        <%# <p>
-          <%= link_to "Find out more", place, class:"info" %>
-        <%# </p> %>
+
+
       </div>
 
     </div>
   </div>
-</div>
+<%# </div> %>

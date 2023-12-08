@@ -2,11 +2,18 @@
 body{
   background-color: #EBE3D5;
 }
+.headerbloc{
+  position: sticky;
+    // background-color: #EBE3D5;
+    display: block;
+    top: 0;
+    z-index: 100;
+}
 
 h1{
   color:#1C1C1C;
 font-family: Playfair Display;
-font-size: 28px;
+font-size: 25px;
 font-style: normal;
 font-weight: 800;
 line-height: normal;
@@ -29,7 +36,7 @@ margin-left: 15px;
   margin-top: 5px;
   margin-bottom: 10px;
   display: flex;
-  width: 350px;
+  width: 95%;
   height: 140px;
   justify-content: center;
   align-items: center;
