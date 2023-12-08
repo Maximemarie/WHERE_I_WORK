@@ -4,8 +4,9 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.place = @place
+    @review.user = current_user
     if @review.save
-      redirect_to place_path(@place)
+      redirect_to place_path(@review.place_id)
     else
       render :new, status: :unprocessable_entity
     end
@@ -32,7 +33,7 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:content)
+    params.require(:review).permit(:content, :rating)
   end
 
 end
