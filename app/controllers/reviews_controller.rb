@@ -28,7 +28,7 @@ class ReviewsController < ApplicationController
   private
 
   def set_place
-    @place = Place.find(params[:restaurant_id])
+    @place = Place.find(params[:place_id])
   end
 
   def review_params
