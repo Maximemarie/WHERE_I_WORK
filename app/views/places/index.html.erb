@@ -9,7 +9,10 @@ or by distance and various filters like distance, rating, other things.-->
 
   <%= render "header" %>
 
-  <h1>Good Morning, Léane</h1>
+
+  <h1>Good Morning,<br> Léane...</h1>
+
+
 <div class="headerbloc">
   <div class = "search">
 
@@ -26,9 +29,10 @@ or by distance and various filters like distance, rating, other things.-->
 
   </div>
 </div>
-
   <!-- This where the List view starts -->
-<ul class="nav nav-tabs justify-content-center border-0" id="myTab" role="tablist">
+<ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+
+
   <li class="nav-item" role="presentation">
     <button
       class= "nav-link active btn2 btn2-left"
@@ -62,6 +66,7 @@ or by distance and various filters like distance, rating, other things.-->
 </ul>
 
   </div>
+   <%=image_submit_tag "filtre.png", name: "", class: "filtre " %>
 <%# <h2>Coffee Places</h2> %>
 
 <!-- This is the content inside the List view -->
