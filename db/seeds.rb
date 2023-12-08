@@ -11,6 +11,8 @@
 puts "Cleaning database..."
 Place.destroy_all
 User.destroy_all
+Favorites.destroy_all
+Reviews.destroy_all
 
 puts "Creating users..."
 
