@@ -13,7 +13,7 @@ body{
 h1{
   color:#1C1C1C;
 font-family: Playfair Display;
-font-size: 25px;
+font-size: 27px;
 font-style: normal;
 font-weight: 800;
 line-height: normal;
@@ -21,16 +21,51 @@ margin-left: 15px;
 // margin-top: 7px;
 }
 
-h2{
-color: var(--Color-6, #1C1C1C);
-font-family: Playfair Display;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-top: 15px;
-margin-left: 15px;
+.btn2{ // For the map and list btn
+  background-color: #343633;
+  color:white;
+  font-family:'Public Sans', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  width: auto;
+  width: 80px;
+  height: 36px;
+  justify-content: center;
+  flex-shrink: 0;
+  border: none;
+  text-align: center;
+  margin-top: 3px;
+  word-wrap: break-word;
+  padding-top: 7px;
+  margin-bottom: 5px;
+
+  &.btn2-left{
+    border-top-left-radius:30px ;
+    border-bottom-left-radius:30px ;
+
+  }
+
+  &.btn2-right{
+    border-top-right-radius:30px ;
+    border-bottom-right-radius:30px ;
+
+  }
+
+  &.active{
+    text-decoration: underline;
+    background-color: #343633 !important;
+    color: white !important;
+  }
 }
+.filtre{
+  width: 35px;
+  display: flex;
+  margin-right: 20px;
+  margin-left: 320px;
+  }
 .Card-place{
   margin: auto;
   margin-top: 5px;
@@ -77,9 +112,8 @@ margin-left: 15px;
     }
 
     .logo{
-      left: 323px;
       position: absolute;
-      right: 16px;
+      right: 10px;
       top: -7px;
       width: 17px;
       height: 17px;
