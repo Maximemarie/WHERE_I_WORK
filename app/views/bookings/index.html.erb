@@ -9,22 +9,76 @@
           <%=image_submit_tag "loupe.png", name: "", class: "btn_search" %>
         <% end %>
   </div>
-<h1>Where you work</h1>
 
- <div class="container my-2 placecard">
-      <% @bookings.each do |booking| %>
+<ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
 
-        <p>
-         Your booking is on: <%= booking.date %>
-        </p>
-        <p>
-          At: <%= booking.time %>
-        </p>
-        <p>
-          For: <%= booking.place.name %>
-        </p>
-        <p>
-        <%= link_to "Make  reservation", booking_path(booking)%>
-        </p>
-      <% end %>
+
+  <li class="nav-item" role="presentation">
+    <button
+      class= "nav-link active btn2 btn2-left"
+      id="home-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#home"
+      type="button"
+      role="tab"
+      aria-controls="home"
+      aria-selected="true"
+    >
+      Past
+    </button>
+  </li>
+
+  <!-- This is where the Map view starts -->
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link btn2 btn2-right"
+      id="profile-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#profile"
+      type="button"
+      role="tab"
+      aria-controls="profile"
+      aria-selected="false"
+    >
+      Coming
+    </button>
+  </li>
+</ul>
+
+
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <div class="container my-2" >
+     <h1>Where you work</h1>
+        <div class="container my-2 placecard">
+            <% @bookings.each do |booking| %>
+                <p>
+                Your booking is on: <%= booking.date %>
+                </p>
+
+                <p>
+                  At: <%= booking.time %>
+                </p>
+
+                <p>
+                  For: <%= booking.place.name %>
+                </p>
+
+                <p>
+                <%= link_to "Make  reservation", booking_path(booking)%>
+                </p>
+
+            <% end %>
+          </div>
+      </div>
+    </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <!-- This is the content inside the Map view -->
+    <div style="width: 350px; height:500px; border-radius: 30px; border-bottom-left-radius: 30px; margin: auto;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+    >
+    </div>
+  </div>
 </div>
