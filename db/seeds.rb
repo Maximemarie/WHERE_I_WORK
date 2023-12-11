@@ -27,12 +27,9 @@ puts "Creating places.."
 pastelrita = Place.new(
   id: 510,
   name: "Pastel Rita",
-  description: "Welcome to Pastel Rita, your friendly haven for coworking. In our cafe with soothing tones,
-  the intersection of work and relaxation becomes a unique experience. The intoxicating aroma of freshly ground coffee
-  accompanies each creative encounter. With bright spaces, fast Wi-Fi, and artisanal delights, every visit transforms
-  into a productive and enjoyable moment. Pastel Rita is not just a cafe but a place where creative minds meet, ideas
-  flourish, and collaboration becomes natural. Join us for a coffee break or an inspiring workday in a welcoming
-  atmosphere.",
+  description: "Pastel Rita: Your coworking haven. Relax and work in our soothing cafe with fast Wi-Fi, artisanal
+  treats, and a creative atmosphere. Join us for a productive and enjoyable
+  workday or a quick coffee break.",
   location: "5761 Boul. Saint-Laurent",
   rating: 3,
   contact_details: "554-664-7774"
@@ -58,12 +55,10 @@ berniebeigne.save!
 butterblume = Place.new(
   id: 521,
   name: "Butterblume",
-  description: "Welcome to Butterblum, the epicenter of indulgence and creativity. Our coworking cafe is where
-  exceptional vegan flavors meet inspiration. Picture exquisitely delicious pastries, stimulating workspaces,
-  and an ambiance where each bite transports you to a sweet paradise. Quickly connect with our Wi-Fi, plug into your
-  workstation, and let yourself be carried away by the magic of Butterblum, where every moment is a celebration of the
-  perfect fusion between a passion for work and gastronomic delight. Come, indulge, create, and experience
-  the unique essence of Butterblum.",
+  description: "Indulge at Butterblum, where vegan delights and creativity converge. Savor exquisite pastries, find
+  inspiration in stimulating workspaces, and immerse yourself in an ambiance that transports you to a sweet paradise.
+  With fast Wi-Fi, plug in, and let Butterblum's magic celebrate the fusion of work and gastronomic passion.
+  Experience the unique essence with us.",
   location: "5836 Boul. Saint-Laurent",
   rating: 5,
   contact_details: "554-664-7774"
@@ -75,12 +70,9 @@ butterblume.save!
 ingamba = Place.new(
   id: 34,
   name: "Café In Gamba",
-  description: "Welcome to In Gamba, more than just a café, it's a sensory experience that will awaken your senses.
-  Immerse yourself in the intoxicating aroma of our freshly roasted coffee and dive into a warm setting. Nestled in the
-  hustle and bustle of urban life, our café offers a refuge of tranquility, where each cup tells a story of quality and
-  passion. Indulge in our delicious culinary creations, carefully crafted to complement every sip. In Gamba is where
-  connoisseurs meet, where coffee becomes a celebration, and where every moment is a delightfully unforgettable pause.
-  Come, discover, and savor the experience at In Gamba.",
+  description: "Welcome to In Gamba, a sensory café experience. Amid urban life, enjoy the aroma of freshly roasted
+  coffee and a warm setting. Each cup tells a tale of quality and passion. Indulge in crafted culinary delights,
+  turning every moment into a delightful pause. Discover and savor the In Gamba experience.",
   location: "71 R. St Viateur Est",
   rating: 3,
   contact_details: "554-664-7774"
