@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_11_150730) do
+
+ActiveRecord::Schema[7.1].define(version: 2023_12_11_170500) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -61,6 +63,18 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_11_150730) do
     t.bigint "user_id"
     t.index ["place_id"], name: "index_favorites_on_place_id"
     t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "filters", force: :cascade do |t|
+    t.boolean "outlets"
+    t.boolean "vegan"
+    t.boolean "gluten_free"
+    t.boolean "wifi"
+    t.string "ambiance"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "place_id"
+    t.index ["place_id"], name: "index_filters_on_place_id"
   end
 
   create_table "places", force: :cascade do |t|
