@@ -1,26 +1,34 @@
-bookings show page
+<div class="place-background" style="background-image: url(<%= @booking.place.photos.first.url %>)">
+  <%= render "shared/headerphoto_return"%>
+
+  <div class = "card">
+    <h1> Your confirmation </h1>
+
+    <div class ="details">
+
+      <p class = "date">
+        <%= @booking.date %>
+      </p>
+
+        <div class ="detailsinfo">
+          <p class = "time">
+            <%= @booking.time %>
+          </p>
+          <p>
+            at
+          </p>
+          <p class = "location">
+            <%= @booking.place.location %>
+          </p>
+        </div>
 
 
-<h2> Your confirmation: </h2>
- <div>
-    <p>
-      <%= @booking.date %>
-    </p>
-    <p>
-      <%= @booking.time %>
-    </p>
-    <p>
-      at
-    </p>
-    <p>
-      <%= @booking.place.location %>
-    </p>
+        <p class ="advice">
+          Please note that your reservation will be valid for 45 minutes on the selected date.
+        </p>
+    </div>
   </div>
 
-  <div>
-    <p>
-      Please note that your reservation will be valid for 45 minutes on the selected date.
-    </p>
-  </div>
+    <%# <h2>We can't wait to see you !</h2> %>
 
-  <h2>We can't wait to see you !</h2>
+</div>
