@@ -25,7 +25,6 @@ testUser.save!
 puts "Creating places.."
 
 pastelrita = Place.new(
-  id: 510,
   name: "Pastel Rita",
   description: "Pastel Rita: Your coworking haven. Relax and work in our soothing cafe with fast Wi-Fi, artisanal
   treats, and a creative atmosphere. Join us for a productive and enjoyable
@@ -36,10 +35,12 @@ pastelrita = Place.new(
 )
 file = URI.open("https://images.squarespace-cdn.com/content/v1/59ebb403dc2b4af6dba8cb67/1548988299768-2IO5KY0JKWFD1CNVJZ7K/untitled+shoot-0078.jpg?format=1500w")
 pastelrita.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+menuboard = File.open(Rails.root.join("app", "assets", "images", "menuboard.png"))
+pastelrita.menuboard.attach(io: menuboard, filename: 'nes.png', content_type: 'image/png')
 pastelrita.save!
 
 berniebeigne = Place.new(
-  id: 556,
   name: "Bernie Beigne",
   description: "Welcome to Bernie Beigne, the gourmet oasis where exquisite flavors meet relaxed productivity.
   Immerse yourself in the retro atmosphere, savor our artisanal donuts, and let yourself be inspired. With fast Wi-Fi
@@ -53,7 +54,6 @@ berniebeigne.photos.attach(io: file, filename: 'nes.png', content_type: 'image/p
 berniebeigne.save!
 
 butterblume = Place.new(
-  id: 521,
   name: "Butterblume",
   description: "Indulge at Butterblum, where vegan delights and creativity converge. Savor exquisite pastries, find
   inspiration in stimulating workspaces, and immerse yourself in an ambiance that transports you to a sweet paradise.
@@ -68,7 +68,6 @@ butterblume.photos.attach(io: file, filename: 'nes.png', content_type: 'image/pn
 butterblume.save!
 
 ingamba = Place.new(
-  id: 34,
   name: "Café In Gamba",
   description: "Welcome to In Gamba, a sensory café experience. Amid urban life, enjoy the aroma of freshly roasted
   coffee and a warm setting. Each cup tells a tale of quality and passion. Indulge in crafted culinary delights,

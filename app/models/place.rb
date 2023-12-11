@@ -6,6 +6,7 @@ class Place < ApplicationRecord
 
   # It has seveal attached photos
   has_many_attached :photos
+  has_one_attached :menuboard
 
   # It has many bookings
   has_many :bookings
