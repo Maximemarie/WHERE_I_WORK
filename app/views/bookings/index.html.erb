@@ -12,5 +12,8 @@ bookings index
         <p>
           For: <%= booking.place.name %>
         </p>
+        <p>
+        <%= link_to "Make  reservation", booking_path(booking)%>
+        </p>
       <% end %>
 </div>
