@@ -58,7 +58,7 @@ butterblume = Place.new(
   description: "Indulge at Butterblum, where vegan delights and creativity converge. Savor exquisite pastries, find
   inspiration in stimulating workspaces, and immerse yourself in an ambiance that transports you to a sweet paradise.
   With fast Wi-Fi, plug in, and let Butterblum's magic celebrate the fusion of work and gastronomic passion.
-  Experience the unique essence with us.",
+  Experience the unique essence with us in Montréal.",
   location: "5836 Boul. Saint-Laurent",
   rating: 5,
   contact_details: "554-664-7774"
