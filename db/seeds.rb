@@ -82,17 +82,17 @@ ingamba.save!
 
 puts "Creating Test Favorites"
 
-testFav = Favorite.new(place_id: 556, user_id: testUser.id)
+testFav = Favorite.new(place_id: ingamba.id, user_id: testUser.id)
 testFav.save!
 
 puts "Creating Test Review"
 
-testRev = Review.new(place_id: 556, user_id: testUser.id , content: "Did NOT like this place", rating: 2)
+testRev = Review.new(place_id: ingamba.id, user_id: testUser.id , content: "Did NOT like this place", rating: 2)
 testRev.save!
 
 puts "Creating Test Booking"
 
-testBook = Booking.new(place_id: 556, user_id: testUser.id , time: "Sun, 02 Jan 2024 20:24:00.000000000 UTC +00:00")
+testBook = Booking.new(place_id: ingamba.id, user_id: testUser.id , time: "Tue, 02 Jan 2024 20:24:00.000000000 UTC +00:00")
 testBook.save!
 
 puts "Done !"
