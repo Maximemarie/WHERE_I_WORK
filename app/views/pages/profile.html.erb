@@ -1,7 +1,7 @@
-profile page
 
+<%= image_tag "leane.jpeg", class:"photo"%>
 <div>
-<%= link_to "Reviews", reviews_path %>
+<%= link_to "Reviews", reviews_path, class: "button"%>
 </div>
 
 <div>
@@ -9,8 +9,11 @@ profile page
    My Upcoming reservation:
   </h2>
   <div>
-
-</div>
+    <div>
+      <h1><%= @upcoming_booking.place.name %></h1>
+    </div>
+    <%= @upcoming_booking.time %>
+  </div>
 </div>
 
 

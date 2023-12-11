@@ -1,0 +1,25 @@
+.button{
+  background-color: #343633;
+  color:white;
+  text-align: center;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  // text-decoration-line: underline;
+  width: 118px;
+  height: 41px;
+  border: none;
+  margin: auto;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+
+.photo{
+  width: 116px;
+  border-radius: 50%;
+  border: 1px solid #343633;
+  display: flex;
+
+}

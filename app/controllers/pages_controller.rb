@@ -5,9 +5,13 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @reviews = Review.where(["user_id = current_user.id"])
-    @favorites = Favorite.where(["user_id = current_user.id"])
-    @bookings = Booking.where(["user_id = current_user.id"])
+    @reviews = Review.where(user: current_user)
+    @favorites = Favorite.where(user: current_user)
+    @bookings = Booking.where(user: current_user)
+
+    future_bookings = @bookings.where("time >= ?", DateTime.now).order(:time)
+      @upcoming_booking = future_bookings.find { |booking| booking.time > DateTime.now }
+
   end
 
 end
