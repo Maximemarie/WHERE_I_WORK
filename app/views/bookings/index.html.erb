@@ -1,6 +1,17 @@
-bookings index
+<%= render "places/header" %>
 
- <div class="container my-2">
+  <div class = "search">
+        <%= form_with url: places_path, method: :get, class: "d-flex formsearch" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            placeholder: "Find your happy place..."
+            %>
+          <%=image_submit_tag "loupe.png", name: "", class: "btn_search" %>
+        <% end %>
+  </div>
+<h1>Where you work</h1>
+
+ <div class="container my-2 placecard">
       <% @bookings.each do |booking| %>
 
         <p>
