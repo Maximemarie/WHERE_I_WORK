@@ -1,7 +1,12 @@
 .backgroundshow{
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("tommy.jpg");
-  min-height: 100vh;
   position: relative;
+}
+
+.place-background {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
 
 .cardinfo{

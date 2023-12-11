@@ -4,10 +4,7 @@ you will book-->
 
 <%# Path: app/views/places/show.html.erb %>
 
-
-  <% #<form class= "return_btn"> %>
-
-  </form>
+<div class="place-background" style="background-image: url(<%= @place.photos.first.url %>)">
   <%= render "headerphoto_return"%>
 
       <%# <br> %>
@@ -60,6 +57,8 @@ you will book-->
 
 
     </div>
+
+</div>
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
