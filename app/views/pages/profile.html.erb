@@ -9,7 +9,10 @@ profile page
    My Upcoming reservation:
   </h2>
   <div>
-  <%= @bookings.find { |booking| booking.date > current date && booking.time > current time } %>
+    <div>
+      <h1><%= @upcoming_booking.place.name %></h1>
+    </div>
+    <%= @upcoming_booking.time %>
   </div>
 </div>
 

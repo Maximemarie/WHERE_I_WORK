@@ -9,9 +9,8 @@ class PagesController < ApplicationController
     @favorites = Favorite.where(user: current_user)
     @bookings = Booking.where(user: current_user)
 
-    future_bookings = @bookings.where("date >= ?", Date.today).order(:date, :time)
-
-    raise
+    future_bookings = @bookings.where("time >= ?", DateTime.now).order(:time)
+      @upcoming_booking = future_bookings.find { |booking| booking.time > DateTime.now }
 
   end
 
