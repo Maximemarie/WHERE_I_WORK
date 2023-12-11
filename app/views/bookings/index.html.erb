@@ -45,37 +45,35 @@
   </li>
 </ul>
 
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <div class="container my-2">
+        <% @bookings.each do |booking| %>
+          <div class="Card-place" style="background-image: url(<%= booking.place.photos.first.url %>)">
+      <!-- <p>
+            Your booking is on: <%= booking.date %>
+            </p>
+            <p>
+              At: <%= booking.time %>
+            </p> -->
 
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
-    <div class="container my-2" >
-     <h1>Where you work</h1>
-        <div class="container my-2 placecard">
-            <% @bookings.each do |booking| %>
-
-                <p>
-                  At: <%= booking.time %>
-                </p>
-
-                <p>
-                  For: <%= booking.place.name %>
-                </p>
-
-                <p>
-                <%= link_to "Confirmation Details", booking_path(booking)%>
-                </p>
-
-            <% end %>
+            <p class="card-name-reservation">
+              <%= booking.place.name %>
+            </p>
+            <p>
+            <%= link_to "More details", booking_path(booking), class: "see-details"%>
+            </p>
           </div>
+          <% end %>
+        </div>
+      </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <!-- This is the content inside the Map view -->
+      <div style="width: 350px; height:500px; border-radius: 30px; border-bottom-left-radius: 30px; margin: auto;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+      >
       </div>
     </div>
-  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-    <!-- This is the content inside the Map view -->
-    <div style="width: 350px; height:500px; border-radius: 30px; border-bottom-left-radius: 30px; margin: auto;"
-      data-controller="map"
-      data-map-markers-value="<%= @markers.to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-    >
-    </div>
   </div>
-</div>
