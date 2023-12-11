@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  get "profile", to: "pages#profile"
 
   resources :places, only: [:index, :show] do
     resources :bookings, only: [:new, :create, :destroy]
