@@ -1,3 +1,4 @@
+
 <%= render "places/header" %>
 
   <div class = "search">
@@ -51,9 +52,6 @@
      <h1>Where you work</h1>
         <div class="container my-2 placecard">
             <% @bookings.each do |booking| %>
-                <p>
-                Your booking is on: <%= booking.date %>
-                </p>
 
                 <p>
                   At: <%= booking.time %>
@@ -64,7 +62,7 @@
                 </p>
 
                 <p>
-                <%= link_to "Make  reservation", booking_path(booking)%>
+                <%= link_to "Confirmation Details", booking_path(booking)%>
                 </p>
 
             <% end %>

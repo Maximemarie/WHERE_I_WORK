@@ -7,6 +7,5 @@ class Booking < ApplicationRecord
   belongs_to :place
 
   # It validates start_date and end_date
-  validates :date, presence: true
   validates :time, presence: true
 end
