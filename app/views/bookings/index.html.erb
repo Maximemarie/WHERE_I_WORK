@@ -4,10 +4,7 @@ bookings index
       <% @bookings.each do |booking| %>
 
         <p>
-         Your booking is on: <%= booking.date %>
-        </p>
-        <p>
-          At: <%= booking.time %>
+         Your booking is at: <%= booking.time %>
         </p>
         <p>
           For: <%= booking.place.name %>

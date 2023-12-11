@@ -95,7 +95,7 @@ testRev.save!
 
 puts "Creating Test Booking"
 
-testBook = Booking.new(place_id: 556, user_id: testUser.id , date: "Mon, 11 Dec 2023", time: "Sun, 02 Jan 2000 20:24:00.000000000 UTC +00:00")
+testBook = Booking.new(place_id: 556, user_id: testUser.id , time: "Sun, 02 Jan 2024 20:24:00.000000000 UTC +00:00")
 testBook.save!
 
 puts "Done !"
