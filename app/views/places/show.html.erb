@@ -4,11 +4,8 @@ you will book-->
 
 <%# Path: app/views/places/show.html.erb %>
 
-
-  <% #<form class= "return_btn"> %>
-
-  </form>
-  <%= render "headerphoto_return"%>
+<div class="place-background" style="background-image: url(<%= @place.photos.first.url %>)">
+  <%= render "shared/headerphoto_return"%>
 
       <%# <br> %>
     <div class = "cardinfo" >
@@ -34,8 +31,10 @@ you will book-->
           <%= link_to "Make  reservation", new_place_booking_path(@place) , class:"resa" %>
           <!-- Button trigger modal -->
         </div>
+        <%= link_to place_favorites_path(@place), data: {turbo_method: :post} do %>
+          <%=image_submit_tag "coeur.png", name: "", class: "fav" %>
+        <% end %>
 
-        <%=image_submit_tag "coeur.png", name: "", class: "fav" %>
       </div>
 
       <div class = "descriptionplace">
@@ -47,18 +46,10 @@ you will book-->
 
 <%# if @favorite.place_id.user_id = current_user.id class = bttn_heart_on (which colors it in and disables it) %>
 
-    <div>
-      <%= link_to "Favorite",
-          place_favorites_path(@place),
-          data: {turbo_method: :post}
-        %>
-    </div>
 
-    <div>
-      <%= link_to "Leave a Review",
-          new_place_reviews_path(@place)
-        %>
-    </div>
+
+      <%= link_to "Leave a Review", new_place_reviews_path(@place), class:"button"%>
+
 
 
   <!--Here is the link to the bookings page-->
@@ -67,20 +58,19 @@ you will book-->
 
     </div>
 
+</div>
+
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <% if @place.menuboard.attached? %>
+            <%= cl_image_tag @place.menuboard.key, width: 325 %>
+          <% end %>
         </div>
       </div>
     </div>

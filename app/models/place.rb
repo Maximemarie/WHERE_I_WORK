@@ -3,8 +3,11 @@ class Place < ApplicationRecord
   has_many :reviews
   # It has many reviews and users through reviews
   has_many :users, through: :reviews
+
   # It has seveal attached photos
- # has_many_attached :photos
+  has_many_attached :photos
+  has_one_attached :menuboard
+
   # It has many bookings
   has_many :bookings
   # It validates name, address and description

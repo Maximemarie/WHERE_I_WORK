@@ -76,5 +76,8 @@ group :test do
   gem "selenium-webdriver"
 end
 
-
+# install geocoder by mapbox
 gem "geocoder"
+
+# install cloudinary
+gem "cloudinary"
