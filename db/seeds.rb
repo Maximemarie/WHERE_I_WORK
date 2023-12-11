@@ -14,12 +14,12 @@ puts "Cleaning database..."
 Place.destroy_all
 User.destroy_all
 Booking.destroy_all
-# Favorites.destroy_all
-# Reviews.destroy_all
+Favorite.destroy_all
+Review.destroy_all
 
 puts "Creating users..."
 
-testUser = User.new(id: 2, email: "test@test.com" , password: 123456)
+testUser = User.new( email: "test@test.com" , password: 123456)
 testUser.save!
 
 puts "Creating places.."
@@ -82,7 +82,17 @@ ingamba.save!
 
 puts "Creating Test Favorites"
 
-#testFav = Favorite.new(id: 1, place_id: 556, user_id: 2)
-#testFave.save!
+testFav = Favorite.new(place_id: 556, user_id: testUser.id)
+testFav.save!
+
+puts "Creating Test Review"
+
+testRev = Review.new(place_id: 556, user_id: testUser.id , content: "Did NOT like this place", rating: 2)
+testRev.save!
+
+puts "Creating Test Booking"
+
+testBook = Booking.new(place_id: 556, user_id: testUser.id , date: "Mon, 11 Dec 2023", time: "Sun, 02 Jan 2000 20:24:00.000000000 UTC +00:00")
+testBook.save!
 
 puts "Done !"

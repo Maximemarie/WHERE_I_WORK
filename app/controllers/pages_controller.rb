@@ -3,4 +3,11 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def profile
+    @reviews = Review.where(["user_id = current_user.id"])
+    @favorites = Favorite.where(["user_id = current_user.id"])
+    @bookings = Booking.where(["user_id = current_user.id"])
+  end
+
 end
