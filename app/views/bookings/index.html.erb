@@ -50,13 +50,6 @@
       <div class="container my-2">
         <% @bookings.each do |booking| %>
           <div class="Card-place" style="background-image: url(<%= booking.place.photos.first.url %>)">
-      <!-- <p>
-            Your booking is on: <%= booking.date %>
-            </p>
-            <p>
-              At: <%= booking.time %>
-            </p> -->
-
             <p class="card-name-reservation">
               <%= booking.place.name %>
             </p>
