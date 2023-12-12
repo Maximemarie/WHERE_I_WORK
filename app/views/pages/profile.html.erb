@@ -1,21 +1,32 @@
+<%= render "shared/headerlogo"%>
+<div class = "container d-flex justify-content-between">
+    <div class= "empty-image"></div>
+    <%= image_tag "leane.jpeg", class:"photo"%>
+    <div class= "empty-image"></div>
+    <%# </div> %>
 
-<%= image_tag "leane.jpeg", class:"photo"%>
+</div>
 <div>
-<%= link_to "Reviews", reviews_path, class: "button"%>
+<%= link_to "My Reviews", reviews_path, class: "button1"%>
 </div>
 
 <div>
-  <h2>
-   My Upcoming reservation:
-  </h2>
-  <div>
+    <h5>
+    My Upcoming Reservation:
+    </h5>
     <div>
-      <h1><%= @upcoming_booking.place.name %></h1>
+      <div>
+        <h1><%= @upcoming_booking.place.name %></h1>
+      </div>
+      <%= @upcoming_booking.time %>
     </div>
-    <%= @upcoming_booking.time %>
-  </div>
 </div>
 
 
 
 <div>
+
+  <h5>
+    My Favorites:
+  </h5>
+ </div>
