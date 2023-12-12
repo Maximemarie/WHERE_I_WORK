@@ -17,7 +17,11 @@ class ReviewsController < ApplicationController
   end
 
   def index
-    @places = Place.where(user_id: current_user)
+    @reviews = Review.where(user: current_user)
+  end
+
+  def place_index
+    @reviews = Review.where(place: @place)
   end
 
   def destroy
