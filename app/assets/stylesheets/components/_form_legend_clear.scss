@@ -50,3 +50,20 @@ legend ~ div.form-check:first-of-type {
   margin-top: 20px;
   margin-right: 20px;
 }
+
+.btn-outline-primary {
+  color: #F3EEEA;
+  font-size: 16px;
+  text-align: center;
+  border-color: #343633;
+  flex-shrink: 0;
+  border-radius: 7px;
+  background: var(--Color-5, #343633);
+  margin-top: 10px;
+}
+
+.display-hours{
+  display: flex;
+  margin: 10px;
+  justify-content: space-between;
+}
