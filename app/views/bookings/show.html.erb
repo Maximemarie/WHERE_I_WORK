@@ -28,6 +28,10 @@
         <p class ="advice">
           Please note that your reservation will be valid for 45 minutes on the selected date.
         </p>
+        <p class ="reminder">
+          After leaving the place, please don't forget to
+          <%= link_to "Leave Review", new_place_reviews_path(@booking.place), class:"button"%>
+          </p>
     </div>
   </div>
 
