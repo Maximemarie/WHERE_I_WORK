@@ -51,6 +51,23 @@ you will book-->
       <%= link_to "Leave a Review", new_place_reviews_path(@place), class:"button"%>
 
 
+<!-- Here it iterates through all the reviews that a place has and renders them -->
+  <div>
+    <% @reviews.each do |review| %>
+      <div>
+        <%= review.content %>
+      </div>
+
+      <div>
+        <%= review.rating %>
+      </div>
+
+      <div>
+        <%= review.user.username %>
+      </div>
+      <% end  %>
+
+  </div>
 
   <!--Here is the link to the bookings page-->
 
@@ -59,6 +76,8 @@ you will book-->
     </div>
 
 </div>
+
+
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

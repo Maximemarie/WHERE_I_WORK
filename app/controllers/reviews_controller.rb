@@ -20,10 +20,6 @@ class ReviewsController < ApplicationController
     @reviews = Review.where(user: current_user)
   end
 
-  def place_index
-    @reviews = Review.where(place: @place)
-  end
-
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
