@@ -19,7 +19,7 @@ Review.destroy_all
 
 puts "Creating users..."
 
-testUser = User.new( email: "test@test.com" , password: 123456)
+testUser = User.new( email: "test@test.com" , password: 123456, username: "TestyBestie")
 testUser.save!
 
 puts "Creating places.."
