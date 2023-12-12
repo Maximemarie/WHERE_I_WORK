@@ -10,8 +10,8 @@ legend ~ div.form-check:first-of-type {
 }
 
 .booking-form{
-  margin: 40px 20px;
-    background-color: white;
+  margin: 20px 20px;
+    background-color: #F3EEEA;
     padding: 10px;
     padding-bottom: 10px;
     border-radius: 15px;
@@ -29,19 +29,24 @@ legend ~ div.form-check:first-of-type {
   // text-decoration-line: underline;
   width: 100px;
   height: 38px;
-  margin-left: 200px;
   border-radius: 55px;
   border: 1px solid#343633;
 }
 
 .title-form{
-  font-family: Public Sans;
-  font-size: 24px;
+  color:#1C1C1C;
+  font-family: Playfair Display;
+  font-size: 22px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 800;
   line-height: normal;
   letter-spacing: 0em;
-  text-align: left;
-  color: #343633;
-  padding: 20px 5px;
+  margin-top: 50px;
+  padding-left: 8px;
+}
+
+.position-button{
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 20px;
 }

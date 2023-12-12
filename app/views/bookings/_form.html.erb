@@ -1,10 +1,29 @@
 <!--New booking form -->
+<div data-controller="formstyling">
+  <div class="form-group booking-form">
+    <label for="dates">Choose a date:</label>
+    <select id="dates" name="dates" data-action="change->formstyling#updateDate">
+      <option value=""></option>
+      <option value="<%= Date.today %>"><%= Date.today.strftime("%A, %b %d") %></option>
+      <option value="<%= Date.today + 1 %>"><%= (Date.today + 1).strftime("%A, %b %d") %></option>
+      <option value="<%= Date.today + 2 %>"><%= (Date.today + 2).strftime("%A, %b %d") %></option>
+    </select>
 
-<%= simple_form_for [@place, @booking], html: { class: 'booking-form' } do |f| %>
-  <div class="form-group">
-    <%= f.label :time, 'When do you want to work?', class: 'title-form' %>
-    <%= f.input :time, as: :datetime, html5: true, input_html: { class: 'form-control' }, label: false %>
+    <div data-formstyling-target="togglableElement" class="d-none">
+      <p data-action="click->formstyling#fire" class="btn btn-outline-primary">10h30</p>
+      <p data-action="click->formstyling#fire" class="btn btn-outline-primary">11h45</p>
+      <p data-action="click->formstyling#fire" class="btn btn-outline-primary">13h</p>
+      <p data-action="click->formstyling#fire" class="btn btn-outline-primary">20h30</p>
+    </div>
   </div>
 
-  <%= f.button :submit, 'Book', class: 'btn-booking-form' %>
-<% end %>
+  <%= simple_form_for [@place, @booking] do |f| %>
+    <%= f.input :hours, input_html: {data: { formstyling_target: 'timepicker'}}, as: :hidden %>
+    <%= f.input :date, input_html: {data: { formstyling_target: 'datepicker'}}, as: :hidden %>
+
+    <!-- submit button -->
+    <div class="position-button">
+      <%= f.button :submit, 'Book', class: 'btn-booking-form' %>
+    </div>
+  <% end %>
+</div>
