@@ -1,5 +1,6 @@
 
 <div class="place-background" style="background-image: url(<%= @booking.place.photos.first.url %>)">
+<div class ="fond">
   <%= render "shared/headerphoto_return"%>
 
   <div class = "card">
@@ -9,6 +10,9 @@
 
 
         <div class ="detailsinfo">
+          <p class = "date">
+            <%= @booking.place.name %>
+          </p>
           <p class = "time">
             <%= @booking.time %>
           </p>
@@ -28,5 +32,5 @@
   </div>
 
     <%# <h2>We can't wait to see you !</h2> %>
-
+</div>
 </div>

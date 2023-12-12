@@ -10,23 +10,28 @@
 <%= link_to "My Reviews", reviews_path, class: "button1"%>
 </div>
 
-<div>
-    <h5>
-    My Upcoming Reservation:
-    </h5>
-    <div>
-      <div>
-        <h1><%= @upcoming_booking.place.name %></h1>
-      </div>
-      <%= @upcoming_booking.time %>
-    </div>
-</div>
 
+<h5> My Upcoming Reservation :</h5>
+<div class= "place-info">
+  <div class="cardforplace" style="background-image: url(<%= @upcoming_booking.place.photos.first.url %>)">
+
+      <div class = "card-place-profile">
+        <div class ="card-place-info">
+          <div class= "card-place-name">
+            <h6><%= @upcoming_booking.place.name %></h6>
+          </div>
+          <div class= "card-place-time">
+            <%= @upcoming_booking.time %>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
 
 
 <div>
 
   <h5>
-    My Favorites:
+    My Favorites :
   </h5>
  </div>

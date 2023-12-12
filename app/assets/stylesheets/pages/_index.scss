@@ -93,8 +93,12 @@ a:active { text-decoration: none; }
 
 
 
-  .card-info{
 
+  .card-info{
+    background-color: rgba(52, 54, 51,0.5);
+      width: 333px;
+  height: 140px;
+      border-radius: 10px;
     .card-place-name{
       margin: auto;
       word-wrap: break-word;
@@ -106,6 +110,7 @@ a:active { text-decoration: none; }
       line-height: normal;
       text-align: center;
       align-items: center;
+      padding-top: 55px;
     }
 
     .Rating{
