@@ -4,7 +4,7 @@
 
 .place-background {
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   background-size: cover;
   background-position: center;
 }
@@ -13,12 +13,19 @@
   background-color: #EBE3D5;
   width: 100%;
   height: 500px;
-  top: 340px;
+  top: 205px;
   border-radius: 30px, 30px, 0px, 0px;
-  position: absolute;
+  position: relative;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
 
+  .title{
+    font-family: Playfair Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    margin-left: 20px;
+  }
     .nameplace{
     font-family: Playfair Display;
     font-size: 28px;
@@ -27,7 +34,8 @@
     line-height: normal;
     color: #1C1C1C;
     margin-left: 20px;
-    margin-top: 10px;
+    margin-top: 15px;
+    padding-top: 10px;
     }
 
     .locationplace{
@@ -78,7 +86,7 @@
       height: 35px;
       display: flex;
       margin-right: 20px;
-      margin-top: -8px;
+      margin-top: -17px;
     }
 
 
@@ -104,7 +112,7 @@
       width: 40px;
       line-height: 16px;
       text-decoration: underline;
-      margin-top: -8px;
+      margin-top: -17px;
     }
 
     .btnmenu{ //For the Apply, See Menu, My review page;
@@ -116,7 +124,7 @@
       color: white;
       margin-left: 15px;
       font-size: 15px;
-      margin-top: -9px;
+      margin-top: -17px;
       text-decoration:underline;
 
     }
@@ -124,34 +132,94 @@
     .no_underline {
       text-decoration: none
     }
+    .button{
+      // background-color: #343633;
+      color:#1C1C1C;
+      text-align: center;
+      font-family: 'Public Sans', sans-serif;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      border-radius:50px;
+      border: none;
+      width: 118px;
+      height: 41px;
+      display: flex;
+      margin-left: 250px;
+    //  padding: 15px;
+        padding-top: 10px;
+    padding-left: 5px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    position: absolute;
+    right: 16px;
+    top: -1px;
+    left: 10px;
+
+    }
 }
 
-.button{
-  background-color: #343633;
-  color:white;
-  text-align: center;
-  font-family: 'Public Sans', sans-serif;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  border-radius:50px;
-  border: none;
-  width: 118px;
-  height: 41px;
-  display: flex;
-  margin-left: 250px;
-//  padding: 15px;
-    padding-top: 10px;
-padding-left: 5px;
-text-decoration: underline;
 
-}
 
 .fond{
 
   background-color: rgba(52, 54, 51,0.5);
       width: 100%;
       height: 100%;
+
+}
+
+.comments{
+padding-left: 10px;
+width: 90%;
+height: 100px;
+background-color: #F3EEEA;
+margin: auto;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+margin-bottom: 10px;
+border-radius: 10px;
+
+  .username{
+    font-family: Playfair Display;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  }
+  .commentaire{
+    width: 95%;
+    height: 60px;
+    background-color: #fffbf7;
+    border-radius: 10px;
+    margin-left: 3px;
+    color: #1C1C1C;
+
+    .content{
+      font-family: 'Public Sans', sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      padding-top: 5px;
+      padding-left: 10px;
+      color: #565755;
+    }
+
+    .opinion{
+      font-family: 'Public Sans', sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      padding-top: 5px;
+      padding-left: 10px;
+      color: #565755;
+      padding-top: 5px;
+    }
+  }
+
 
 }
