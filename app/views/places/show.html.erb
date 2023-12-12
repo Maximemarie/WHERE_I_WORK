@@ -49,22 +49,27 @@ you will book-->
 
 
 
-      <%= link_to "Leave a Review", new_place_reviews_path(@place), class:"button"%>
+      <%= link_to "Leave Review", new_place_reviews_path(@place), class:"button"%>
 
 
 <!-- Here it iterates through all the reviews that a place has and renders them -->
   <div>
-    <% @reviews.each do |review| %>
-      <div>
-        <%= review.content %>
-      </div>
+    <p class ="title">See comments</p>
+     <% @reviews.each do |review| %>
+      <div class ="comments">
 
-      <div>
-        <%= review.rating %>
-      </div>
+        <div class ="username">
+          <%= review.user.username %>
+        </div>
+        <div class ="commentaire">
+          <div class ="content">
+            <%= review.content %>
+          </div>
 
-      <div>
-        <%= review.user.username %>
+          <div class ="opinion">
+            <%= review.rating %>
+          </div>
+        </div>
       </div>
       <% end  %>
 

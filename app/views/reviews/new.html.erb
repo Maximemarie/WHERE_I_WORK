@@ -1,15 +1,24 @@
-<div class = "background">
- <div class = "cardreview">
-  <h3>New review</h3>
+<div class="place-background" style="background-image: url(<%= @place.photos.first.url %>)">
+  <div class ="fond">
+  <%= render "shared/headereturn"%>
+    <div class = "background">
 
-  <%= simple_form_for([@place, @review]) do |f| %>
-    <div class= "comment" >
-    <%= f.input :content %>
-    <%= f.input :rating, collection: 1..5, as: :integer %>
+      <div class = "bigname">
+        <%= @place.name %>
+      </div>
+    <div class = "cardreview">
+      <h3>New review</h3>
 
-      <%= f.submit class:"button"%>
+      <%= simple_form_for([@place, @review]) do |f| %>
+        <div class= "comment" >
+        <%= f.input :content , placeholder: "Write your comment inside"%>
+        <%= f.input :rating, collection: 1..5, as: :integer, placeholder: "choose 1 - 5"%>
 
-  <% end %>
-  </div>
+          <%= f.submit class:"button"%>
+
+      <% end %>
+      </div>
+      </div>
+    </div>
   </div>
 </div>
