@@ -14,7 +14,7 @@
             <%= @booking.place.name %>
           </p>
           <p class = "time">
-            <%= @booking.time %>
+            <%= @booking.time.strftime("%A, %d %b %Y %l:%M %p") %>
           </p>
           <p>
             at

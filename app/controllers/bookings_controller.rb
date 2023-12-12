@@ -6,7 +6,9 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new
+    timing = params.require(:booking).permit(:hours, :date)
+    @booking.time = DateTime.parse([timing[:date], timing[:hours]].join(" ")).change(offset: "-0600")
     @booking.place = @place
     @booking.status = "pending"
     @booking.user_id = current_user.id
