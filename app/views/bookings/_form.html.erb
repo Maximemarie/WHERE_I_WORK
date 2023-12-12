@@ -1,7 +1,10 @@
 <!--New booking form -->
 
+<%= simple_form_for [@place, @booking], html: { class: 'booking-form' } do |f| %>
+  <div class="form-group">
+    <%= f.label :time, 'When do you want to work?', class: 'title-form' %>
+    <%= f.input :time, as: :datetime, html5: true, input_html: { class: 'form-control' }, label: false %>
+  </div>
 
-<%= simple_form_for [@place, @booking] do |f| %>
-  <%= f.input :time %>
-  <%= f.submit %>
+  <%= f.button :submit, 'Book', class: 'btn-booking-form' %>
 <% end %>
