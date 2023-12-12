@@ -1,8 +1,6 @@
 class Booking < ApplicationRecord
   # This is model for booking in our application
   # It belongs to user and place
-
-
   belongs_to :user
   belongs_to :place
 
