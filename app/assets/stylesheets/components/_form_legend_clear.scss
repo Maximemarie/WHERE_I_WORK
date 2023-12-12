@@ -8,3 +8,40 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+.booking-form{
+  margin: 40px 20px;
+    background-color: white;
+    padding: 10px;
+    padding-bottom: 10px;
+    border-radius: 15px;
+}
+
+.btn-booking-form{
+  background-color: #343633;
+  color:white;
+  text-align: center;
+  font-family: Public Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  // text-decoration-line: underline;
+  width: 100px;
+  height: 38px;
+  margin-left: 200px;
+  border-radius: 55px;
+  border: 1px solid#343633;
+}
+
+.title-form{
+  font-family: Public Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #343633;
+  padding: 20px 5px;
+}
