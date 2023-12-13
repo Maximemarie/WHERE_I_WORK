@@ -42,19 +42,19 @@ h5{
   color: rgb(28, 28, 28);
   margin-left: 10px;
   margin-top: 10px;
-
+  margin-bottom: 10px;
 }
 
 .cardforplace{
   margin: auto;
   margin-top: 5px;
-  margin-bottom: 10px;
+
   display: flex;
   width: 85%;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
   border-radius: 10px;
   position: relative;
   background-position: center;
@@ -75,7 +75,7 @@ h5{
       }
       h6{
         margin: auto;
-        margin-top: 20px;
+        margin-top: 30px;
         word-wrap: break-word;
         color: var(--White, #FFF);
         font-family: Playfair Display;
@@ -100,4 +100,22 @@ h5{
     }
 
 
+  }
+  .card-place-timing{
+    width: 320px;
+    height: 35px;
+    background-color: #F3EEEA;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: auto;
+    justify-content: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: -10px;
+    padding-top: 10px;
+    text-align: center;
+    color: #1C1C1C;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 10px;
   }

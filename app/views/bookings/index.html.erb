@@ -50,7 +50,7 @@
       <div class="container my-2">
         <% @bookings.order(:time).each do |booking| %>
           <% if booking.time > Time.now %>
-            <div class="Card-place" style="background-image: url(<%= booking.place.photos.first.url %>)">
+            <div class="Card-place-booking" style="background-image: url(<%= booking.place.photos.first.url %>)">
               <p class="card-name-reservation">
                 <%= booking.place.name %>
               </p>
@@ -66,7 +66,7 @@
     <!-- This is the content inside the Map view -->
       <% @bookings.order(:time).each do |booking| %>
         <% if booking.time < Time.now %>
-          <div class="Card-place" style="background-image: url(<%= booking.place.photos.first.url %>)">
+          <div class="Card-place-booking" style="background-image: url(<%= booking.place.photos.first.url %>)">
             <p class="card-name-reservation">
               <%= booking.place.name %>
             </p>
