@@ -1,6 +1,7 @@
 class Filter < ApplicationRecord
 
-  FILTERS = ["vegan", "gluten_free", "wifi", "outlets"]
+  FOODFILTERS = ["vegan", "gluten_free"]
+  FEATUREFILTERS = ["wifi", "outlets"]
   AMBIANCES = ["chill", "calm", "social"]
 
   belongs_to :place
