@@ -70,7 +70,7 @@ or by distance and various filters like distance, rating, other things.-->
 
 <!-- This is the filter button -->
 <div data-controller= "filter-places">
-          <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btnmenu">
+          <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btnmenu1">
             <%=image_submit_tag "filtre.png", name: "", class: "filtre " %>
           </button>
 
@@ -82,25 +82,33 @@ or by distance and various filters like distance, rating, other things.-->
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+        <p class = "filtertitle"> What are you looking for ? </p>
           <%= form_with url: places_path, method: :get, html: {class:
           "mb-4", data: {filter_places_target: "form"}} do |f| %>
-          <h3>Food</h3>
-          <% Filter::FOODFILTERS.each do |filter| %>
-            <%= label_tag(filter) %>
-            <%= check_box_tag "filters[#{filter}]", nil, false %>
-          <% end %>
-          <h3>Features</h3>
-          <% Filter::FEATUREFILTERS.each do |filter| %>
-            <%= label_tag(filter) %>
-            <%= check_box_tag "filters[#{filter}]", nil, false %>
-          <% end %>
-          <h3>Vibe</h3>
-          <%= label_tag("ambiance") %>
-          <%= select_tag "ambiance", options_for_select(Filter::AMBIANCES), include_blank: true %>
-            <p>
-            </p>
-            <%= f.submit "Apply" %>
-          <% end  %>
+          <p class= "titleinfilter">Food</p>
+          <div class ="thefilters">
+            <% Filter::FOODFILTERS.each do |filter| %>
+              <%= label_tag(filter) %>
+              <%= check_box_tag "filters[#{filter}]", nil, false %>
+            <% end %>
+          </div>
+          <p class= "titleinfilter">Features</p>
+          <div class ="thefilters">
+            <% Filter::FEATUREFILTERS.each do |filter| %>
+              <%= label_tag(filter) %>
+              <%= check_box_tag "filters[#{filter}]", nil, false %>
+            <% end %>
+          </div>
+          <p class= "titleinfilter">Vibe</p>
+          <div class ="thefilters">
+            <%= label_tag("ambiance") %>
+            <%= select_tag "ambiance", options_for_select(Filter::AMBIANCES), include_blank: true %>
+              <p>
+              </p>
+
+              <%= f.submit "Apply", class:"filterbtn"%>
+            <% end  %>
+          </div>
        </div>
     </div>
   </div>
