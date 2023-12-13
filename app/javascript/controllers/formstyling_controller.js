@@ -15,6 +15,7 @@ export default class extends Controller {
     }
 
     fire(event) {
+      event.preventDefault();
       const selectedHour = event.target.innerText;
       this.timepickerTarget.value = selectedHour;
     }
