@@ -11,7 +11,12 @@ class PlacesController < ApplicationController
     if params[:filters].present? || params[:ambiance].present?
       @places = @places.joins(:filter)
       if params[:filters].present?
-        Filter::FILTERS.each do |filter|
+        Filter::FOODFILTERS.each do |filter|
+          if params[:filters].keys.include?(filter)
+            @places = @places.where("filters.#{filter} = true")
+          end
+        end
+        Filter::FEATUREFILTERS.each do |filter|
           if params[:filters].keys.include?(filter)
             @places = @places.where("filters.#{filter} = true")
           end
