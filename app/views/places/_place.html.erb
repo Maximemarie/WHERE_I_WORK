@@ -17,7 +17,7 @@ And others-->
 <%# <div class="row"> %>
 
 <a href="<%= place_path(place) %>">
-  <div class= "Card-place" style= "background-image: url('<%= cl_image_path place.photos.first.key %>')">
+  <div data-filter-places-target="list" class= "Card-place" style= "background-image: url('<%= cl_image_path place.photos.first.key %>')">
     <div data-insert-in-list-target="items" class= "cards">
 
 
