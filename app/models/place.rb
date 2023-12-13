@@ -4,6 +4,8 @@ class Place < ApplicationRecord
   # It has many reviews and users through reviews
   has_many :users, through: :reviews
 
+  has_many :favorites
+
   has_one :filter
   # It has seveal attached photos
   has_many_attached :photos

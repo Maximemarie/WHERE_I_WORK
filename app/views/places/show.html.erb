@@ -32,9 +32,18 @@ you will book-->
           <%= link_to "Make  reservation", new_place_booking_path(@place) , class:"resa" %>
           <!-- Button trigger modal -->
         </div>
-        <%= link_to place_favorites_path(@place), data: {turbo_method: :post} do %>
-          <%=image_submit_tag "coeur.png", name: "", class: "fav" %>
+        <% if @favorite.nil? %>
+          <%= form_with url: place_favorites_path(@place) do |f| %>
+            <%= image_submit_tag "coeur.png", name: "", class: "fav"  %>
+          <% end %>
+        <% else %>
+          <%= form_with url: favorite_path(@favorite), method: :delete do |f| %>
+            <%= image_submit_tag "star.png", name: "", class: "fav"  %>
+          <% end %>
         <% end %>
+        <%# button_to place_favorites_path(@place), method: :post, class: "heart-empty fav" %>
+          <%#image_submit_tag "coeur.png", name: "", class: "fav" %>
+        <%# end %>
 
       </div>
 

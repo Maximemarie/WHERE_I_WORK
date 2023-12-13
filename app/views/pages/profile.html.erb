@@ -32,8 +32,10 @@
 
 
 <div>
-
   <h5>
     My Favorites :
   </h5>
- </div>
+  <% @favorites.each do |favorite| %>
+  <%= favorite.place.name %>
+  <% end %>
+</div>
