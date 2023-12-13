@@ -16,6 +16,7 @@ User.destroy_all
 Booking.destroy_all
 Favorite.destroy_all
 Review.destroy_all
+Filter.destroy_all
 
 puts "Creating users..."
 
@@ -80,17 +81,24 @@ file = URI.open("https://cdn.th3rdwave.coffee/processed/merchants/Tfn6oakZv.jpg/
 ingamba.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 ingamba.save!
 
-puts "Creating Test Favorites"
+puts "Creating Filters..."
+
+testFilter = Filter.new(
+  vegan: true, ambiance: "Chill", place_id: ingamba.id
+)
+testFilter.save!
+
+puts "Creating Test Favorites..."
 
 testFav = Favorite.new(place_id: ingamba.id, user_id: testUser.id)
 testFav.save!
 
-puts "Creating Test Review"
+puts "Creating Test Review..."
 
 testRev = Review.new(place_id: ingamba.id, user_id: testUser.id , content: "Did NOT like this place", rating: 2)
 testRev.save!
 
-puts "Creating Test Booking"
+puts "Creating Test Booking..."
 
 testBook = Booking.new(place_id: ingamba.id, user_id: testUser.id , time: "Tue, 02 Jan 2024 20:24:00.000000000 UTC +00:00")
 testBook.save!
