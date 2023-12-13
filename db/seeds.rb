@@ -23,6 +23,15 @@ puts "Creating users..."
 testUser = User.new( email: "test@test.com" , password: 123456, username: "TestyBestie")
 testUser.save!
 
+testKaren = User.new( email: "karen@test.com" , password: 123456, username: "DontcallmeKaren")
+testKaren.save!
+
+testBrian = User.new( email: "brian@test.com" , password: 123456, username: "BrianLovesCoffee")
+testBrian.save!
+
+testWagon = User.new( email: "wagon@test.com" , password: 123456, username: "CoffeeCoder")
+testWagon.save!
+
 puts "Creating places.."
 
 pastelrita = Place.new(
@@ -83,20 +92,59 @@ ingamba.save!
 
 puts "Creating Filters..."
 
-testFilter = Filter.new(
-  vegan: true, ambiance: "Chill", place_id: ingamba.id
+ingambaFilter = Filter.new(
+  place_id: ingamba.id, vegan: true, gluten_free: false, ambiance: "Chill", outlets: true, wifi: false
 )
-testFilter.save!
+ingambaFilter.save!
+
+pastelritaFilter = Filter.new(
+  place_id: pastelrita.id, vegan: true, gluten_free: true, ambiance: "Quiet", outlets: false, wifi: true
+)
+pastelritaFilter.save!
+
+butterblumeFilter = Filter.new(
+  place_id: butterblume.id, vegan: false, gluten_free: false, ambiance: "Lively", outlets: false, wifi: true
+)
+butterblumeFilter.save!
+
+berniebeigneFilter = Filter.new(
+  place_id: berniebeigne.id, vegan: false, gluten_free: true, ambiance: "Chill", outlets: true, wifi: true
+)
+berniebeigneFilter.save!
 
 puts "Creating Test Favorites..."
 
 testFav = Favorite.new(place_id: ingamba.id, user_id: testUser.id)
 testFav.save!
 
+secFav = Favorite.new(place_id: butterblume.id, user_id: testUser.id)
+secFav.save!
+
 puts "Creating Test Review..."
 
-testRev = Review.new(place_id: ingamba.id, user_id: testUser.id , content: "Did NOT like this place", rating: 2)
+testRev = Review.new(place_id: ingamba.id, user_id: testUser.id , content: "Did NOT like this place", rating: 1)
 testRev.save!
+
+testRev1 = Review.new(place_id: ingamba.id, user_id: testUser.id , content: "Love Love Looooooved it", rating: 5)
+testRev1.save!
+
+testRev2 = Review.new(place_id: berniebeigne.id, user_id: testBrian.id , content: "Pretty good", rating: 4)
+testRev2.save!
+
+testRev3 = Review.new(place_id: berniebeigne.id, user_id: testKaren.id , content: "When i asked for a refund for the sandwich they told me that i had already eaten it. I will never ever eat here again", rating: 1)
+testRev3.save!
+
+testRev4 = Review.new(place_id: pastelrita.id, user_id: testBrian.id , content: "It was SO delicious", rating: 5)
+testRev4.save!
+
+testRev5 = Review.new(place_id: pastelrita.id, user_id: testWagon.id , content: "I got so much work done and the coffee was fantastic", rating: 4)
+testRev5.save!
+
+testRev6 = Review.new(place_id: butterblume.id, user_id: testWagon.id , content: "Ill DEFINITELY be coming back", rating: 5)
+testRev6.save!
+
+testRev6 = Review.new(place_id: butterblume.id, user_id: testUser.id , content: "It was way too loud when I was there", rating: 2)
+testRev6.save!
 
 puts "Creating Test Booking..."
 
