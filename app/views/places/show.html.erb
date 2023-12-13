@@ -34,7 +34,7 @@ you will book-->
         </div>
         <% if @favorite.nil? %>
           <%= form_with url: place_favorites_path(@place) do |f| %>
-            <%= image_submit_tag "heart-empty.png", name: "", class: "fav"  %>
+            <%= image_submit_tag "coeur.png", name: "", class: "fav"  %>
           <% end %>
         <% else %>
           <%= form_with url: favorite_path(@favorite), method: :delete do |f| %>
