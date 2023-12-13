@@ -67,11 +67,14 @@ or by distance and various filters like distance, rating, other things.-->
 
   </div>
 
+
+<!-- This is the filter button -->
 <div data-controller= "filter-places">
           <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btnmenu">
             <%=image_submit_tag "filtre.png", name: "", class: "filtre " %>
           </button>
 
+<!-- this is the filter menu -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -94,13 +97,6 @@ or by distance and various filters like distance, rating, other things.-->
           <h3>Vibe</h3>
           <%= label_tag("ambiance") %>
           <%= select_tag "ambiance", options_for_select(Filter::AMBIANCES), include_blank: true %>
-          <%# f.text_field :query,
-                          class: "form-control",
-                          placeholder: "Type a filter",
-                          value: params[:query],
-                          data: {
-                            filter_places_target: "input",
-                            action: "keyup->filter-places#update"} %>
             <p>
             </p>
             <%= f.submit "Apply" %>
@@ -110,6 +106,7 @@ or by distance and various filters like distance, rating, other things.-->
   </div>
 </div>
 
+<!-- filter button above ends here -->
 
 <!-- This is the content inside the List view -->
 
