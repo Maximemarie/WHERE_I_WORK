@@ -14,4 +14,6 @@ class User < ApplicationRecord
   has_many :places, through: :bookings
   # A user has one attached photo
   # has_one_attached :photo
+  has_many :favorites
+  has_many :favorite_places, through: :favorites, source: :place
 end

@@ -45,6 +45,7 @@ class PlacesController < ApplicationController
   def show
     @place = Place.find(params[:id])
     @reviews = Review.where(place: @place)
+    @favorite = current_user.favorites.find_by(place: @place)
   end
 
   private
