@@ -14,28 +14,35 @@
 <h5> My Upcoming Reservation :</h5>
 <div class= "place-info">
   <div class="cardforplace" style="background-image: url(<%= @upcoming_booking.place.photos.first.url %>)">
-
-      <div class = "card-place-profile">
-        <div class ="card-place-info">
-          <div class= "card-place-name">
-            <h6><%= @upcoming_booking.place.name %></h6>
-          </div>
+    <div class = "card-place-profile">
+          <div class ="card-place-info">
+            <div class= "card-place-name">
+              <h6><%= @upcoming_booking.place.name %></h6>
+            </div>
           </div>
         </div>
       </div>
       <div class = "card-place-timing">
       <%= @upcoming_booking.time.strftime("%A, %d %b %Y %l:%M %p") %>
       </div>
-
   </div>
 </div>
 
 
-<div>
-  <h5>
-    My Favorites :
-  </h5>
+
+<h5> My Favorites :</h5>
+<div class= "favcardcar">
   <% @favorites.each do |favorite| %>
-  <%= favorite.place.name %>
+
+      <div class= "favcard">
+        <div class="cardforplace1" style="background-image: url(<%= favorite.place.photos.first.url %>)">
+          <div class ="fond1">
+          </div>
+        </div>
+        <div class= "favplacename">
+          <%= favorite.place.name %>
+        </div>
+      </div>
+
   <% end %>
 </div>
