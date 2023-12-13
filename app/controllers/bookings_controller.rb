@@ -22,7 +22,6 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    @place
   end
 
   def destroy

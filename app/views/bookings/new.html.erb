@@ -1,5 +1,13 @@
-<%= render "shared/headerphotoslogo"  %>
 
-<h1 class="title-form">When do you want to work?</h1>
+<div class="place-background1" style="background-image: url(<%= @place.photos.first.url %>)">
+  <div class ="fondnew">
+  <div class ="fondform">
+      <%= render "shared/headerphotoslogo"  %>
 
-<%= render "form" %>
+
+      <h1 class="title-form">When do you want to work?</h1>
+
+      <%= render "form" %>
+    </div>
+  </div>
+</div>
