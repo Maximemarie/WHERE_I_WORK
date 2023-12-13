@@ -31,11 +31,20 @@
 </div>
 
 
+<h5>My Favorites :</h5>
 <div>
-  <h5>
-    My Favorites :
-  </h5>
-  <% @favorites.each do |favorite| %>
-  <%= favorite.place.name %>
-  <% end %>
+  <div class= "place-info">
+    <div class="cardforfavs" style="background-image: url(<%= @upcoming_booking.place.photos.first.url %>)">
+
+      <div class = "card-favs-profile">
+        <div class ="card-favs-info">
+          <div class= "card-favs-name">
+            <% @favorites.each do |favorite| %>
+            <%= favorite.place.name %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
