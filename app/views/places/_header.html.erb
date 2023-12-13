@@ -10,7 +10,11 @@ This header has the same colour as the overall app background-->
       <%# <div class = "col-6"> %>
       <div class= "empty-image"></div>
     <%= image_tag "logo.png", class:"logo"%>
-    <%= image_tag "leane.jpeg", class:"image"%>
+    <a href="<%= profile_path %>">
+      <div class="user-pro">
+            <%= image_tag "leane.jpeg", class:"image"%>
+      </div>
+    </a>
 
       <%# </div> %>
     <%# </div> %>
