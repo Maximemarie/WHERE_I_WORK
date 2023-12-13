@@ -39,6 +39,10 @@ legend ~ div.form-check:first-of-type {
   padding-bottom: 10px;
   border-radius: 15px;
   border: none;
+    button:focus {
+      color: #343633;
+      background-color: #F3EEEA;
+      }
   }
 
   .btn-booking-form{

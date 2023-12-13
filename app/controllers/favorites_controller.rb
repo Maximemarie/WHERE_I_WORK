@@ -1,5 +1,5 @@
 class FavoritesController < ApplicationController
-  before_action :set_place, except: [ :destroy ]
+  before_action :set_place, except: [ :destroy, :index ]
 
   def create
     @favorite = Favorite.new
@@ -8,6 +8,10 @@ class FavoritesController < ApplicationController
     @favorite.save!
     redirect_to place_path(@place)
 
+  end
+
+  def index
+    @favorites = Favorite.where(user: current_user)
   end
 
   def destroy

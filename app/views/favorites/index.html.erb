@@ -1,0 +1,73 @@
+
+<%= render "shared/headerphotoslogo" %>
+
+<div class="headerbloc">
+  <div class = "search">
+        <%= form_with url: places_path, method: :get, class: "d-flex formsearch" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            placeholder: "Find your happy place..."
+            %>
+          <%=image_submit_tag "loupe.png", name: "", class: "btn_search" %>
+        <% end %>
+  </div>
+</div>
+
+<!-- This is the filter button -->
+<div data-controller= "filter-places">
+          <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btnmenu1">
+            <%=image_submit_tag "filtre.png", name: "", class: "filtre " %>
+          </button>
+
+<!-- this is the filter menu -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <p class = "filtertitle"> What are you looking for ? </p>
+          <%= form_with url: places_path, method: :get, html: {class:
+          "mb-4", data: {filter_places_target: "form"}} do |f| %>
+          <p class= "titleinfilter">Food</p>
+          <div class ="thefilters">
+            <% Filter::FOODFILTERS.each do |filter| %>
+              <%= label_tag(filter) %>
+              <%= check_box_tag "filters[#{filter}]", nil, false %>
+            <% end %>
+          </div>
+          <p class= "titleinfilter">Features</p>
+          <div class ="thefilters">
+            <% Filter::FEATUREFILTERS.each do |filter| %>
+              <%= label_tag(filter) %>
+              <%= check_box_tag "filters[#{filter}]", nil, false %>
+            <% end %>
+          </div>
+          <p class= "titleinfilter">Vibe</p>
+          <div class ="thefilters">
+            <%= label_tag("ambiance") %>
+            <%= select_tag "ambiance", options_for_select(Filter::AMBIANCES), include_blank: true %>
+              <p>
+              </p>
+
+              <%= f.submit "Apply", class:"filterbtn"%>
+            <% end  %>
+          </div>
+       </div>
+    </div>
+  </div>
+</div>
+
+<h5>My Favorites :</h5>
+  <% @favorites.each do |favorite| %>
+    <div class="favs-card-container" style="background-image: url(<%= favorite.place.photos.first.url %>)">
+      <div class="fond2">
+        <div class="favs-card">
+          <div class="favs-card-name">
+            <%= favorite.place.name %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
