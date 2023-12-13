@@ -7,7 +7,11 @@
         <%=image_submit_tag "returnbtn.svg", name: "", onclick:"history.back()" %>
       </div>
       <div class= "empty-image"></div>
-    <%= image_tag "leane.jpeg", class:"image"%>
+    <a href="<%= profile_path %>">
+      <div class="user-pro">
+            <%= image_tag "leane.jpeg", class:"image"%>
+      </div>
+    </a>
 
       <%# </div> %>
     <%# </div> %>
