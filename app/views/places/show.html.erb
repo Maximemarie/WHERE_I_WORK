@@ -25,7 +25,7 @@ you will book-->
 
       <div class="d-flex justify-content-between mt-4">
         <div class="d-flex">
-          <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btnmenu">
+          <button data-bs-toggle="modal" data-bs-target="#menuModal" class="btnmenu">
             See Menu
           </button>
 
@@ -52,26 +52,39 @@ you will book-->
 
 
 <!-- Here it iterates through all the reviews that a place has and renders them -->
+    <!-- Modal Reviews -->
   <div>
-    <p class ="title">See comments</p>
-     <% @reviews.each do |review| %>
-      <div class ="comments">
-
-        <div class ="username">
-          <%= review.user.username %>
-        </div>
-        <div class ="commentaire">
-          <div class ="content">
-            <%= review.content %>
-          </div>
-
-          <div class ="opinion">
-            <%= review.rating %>
+    <div class="alignbutton">
+      <button type="button" class="btnmenureviews" data-bs-toggle="modal" data-bs-target="#reviewModal">
+        See reviews
+      </button>
+      </div>
+        <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+            <div class="modal-body">
+              <% @reviews.each do |review| %>
+                <div class ="comments">
+                  <div class ="username">
+                    <%= review.user.username %>
+                  </div>
+                <div class ="commentaire">
+                  <div class ="content">
+                    <%= review.content %>
+                  </div>
+                  <div class ="opinion">
+                    <%= review.rating %>
+                  </div>
+                </div>
+              </div>
+            <% end  %>
           </div>
         </div>
       </div>
-      <% end  %>
-
+    </div>
   </div>
 
   <!--Here is the link to the bookings page-->
@@ -83,8 +96,8 @@ you will book-->
 
 
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Modal Menu -->
+  <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">

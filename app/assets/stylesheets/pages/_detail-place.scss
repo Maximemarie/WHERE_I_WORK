@@ -129,6 +129,23 @@
 
     }
 
+    .alignbutton{
+      position: relative;
+      float: right;
+      margin-right: 15px;
+    }
+
+    .btnmenureviews{
+      background-color: #EBE3D5;
+      font-size: 12px;
+      border: none;
+      color: #343633;
+      margin-left: 15px;
+      font-size: 15px;
+      margin-top: 10px;
+      text-decoration:underline;
+    }
+
     .no_underline {
       text-decoration: none
     }
