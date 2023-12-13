@@ -21,6 +21,6 @@ Rails.application.routes.draw do
 
   resources :reviews, only: [:index, :destroy]
 
-  resources :favorites, only: [:destroy]
+  resources :favorites, only: [:index, :destroy]
 
 end
