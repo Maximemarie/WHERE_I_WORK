@@ -1,2 +1,33 @@
-profile reviews
-@reviews contains all the reviews of a user
+
+
+
+<%= render 'shared/headerphotoslogo'%>
+
+<h1 class="replacing">My Reviews</h1>
+<div class="reviewsblock">
+  <% @reviews.each do |review| %>
+    <div class ="commentsreviews">
+      <div class="restaurantreviews">
+        <div class="restaurantcard">
+          <%= review.place.name %>
+        </div>
+      </div>
+      <div class ="usernamereviews">
+        <%= review.user.username %>
+      </div>
+      <div class ="commentairereviews">
+      <div class ="contentreviews">
+        <%= review.content %>
+      </div>
+      <div class ="opinionreviews">
+          <div>
+            <%= review.rating %>
+          </div>
+          <div>
+          <%=image_tag "star.png", name: "", class: "starsize" %>
+          </div>
+      </div>
+      </div>
+    </div>
+  <% end  %>
+</div>
