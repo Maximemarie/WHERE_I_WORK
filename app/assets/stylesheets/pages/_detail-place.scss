@@ -184,14 +184,16 @@ border-radius: 10px;
   padding-top: 5px;
   }
   .commentaire{
-    width: 95%;
+    width: 90%;
     height: 60px;
     background-color: #fffbf7;
     border-radius: 10px;
-    margin-left: 3px;
+    margin: auto;
     color: #1C1C1C;
+    display: flex;
 
     .content{
+      width: 92%;
       font-family: 'Public Sans', sans-serif;
       font-size: 14px;
       font-style: normal;
@@ -208,12 +210,22 @@ border-radius: 10px;
       font-style: normal;
       font-weight: 500;
       line-height: normal;
-      padding-top: 5px;
+      padding-top: 7px;
       padding-left: 10px;
       color: #565755;
-      padding-top: 5px;
+      position: relative;
+      float: right;
+      margin-right: 10px;
+      display: flex;
+    }
+
+    .starsizemodal{
+      width: 12px;
+      height: 14px;
+      position: relative;
+      float: right;
+      padding-top: 2px;
     }
   }
-
 
 }

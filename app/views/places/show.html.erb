@@ -86,8 +86,12 @@ you will book-->
                     <%= review.content %>
                   </div>
                   <div class ="opinion">
-                    <%= review.rating %>
-
+                    <div>
+                      <%= review.rating %>
+                    </div>
+                    <div>
+                      <%=image_tag "star.png", name: "", class: "starsizemodal" %>
+                    </div>
                   </div>
                 </div>
               </div>
