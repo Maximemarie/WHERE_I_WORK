@@ -90,6 +90,75 @@ file = URI.open("https://cdn.th3rdwave.coffee/processed/merchants/Tfn6oakZv.jpg/
 ingamba.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 ingamba.save!
 
+toledo = Place.new(
+  name: "Toledo",
+  description: "
+  Discover Toledo: a sensory journey in a cozy café. Enjoy the aroma of freshly brewed coffee in a warm setting.
+  Each cup reflects quality and passion. Indulge in crafted delights, turning every moment into a delightful pause.
+  Experience Toledo.",
+  location: "351 Mont-Royal Est",
+  rating: 4,
+  contact_details: "554-664-7774"
+)
+file = URI.open("https://cdn.shopify.com/s/files/1/0356/3411/8700/files/EXTERIEUR_BOULANGERIE_VERDUN.jpg?v=1640270586")
+toledo.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+menuboard = File.open(Rails.root.join("app", "assets", "images", "Toledo.png"))
+toledo.menuboard.attach(io: menuboard, filename: 'nes.png', content_type: 'image/png')
+toledo.save!
+
+cafemyriade = Place.new(
+  name: "Café Myriade",
+  description: "
+  Explore Café Myriade, where every sip is a journey through rich coffee blends in a cozy ambiance. Immerse yourself in
+  the aromatic embrace of freshly brewed perfection. Each cup, a testament to quality and passion, invites you to savor
+  crafted delights, transforming moments into indulgent pauses. Café Myriade invites you to experience coffee at
+  its finest.",
+  location: "4627 Rue Saint-Denis",
+  rating: 4,
+  contact_details: "554-664-7774"
+)
+file = URI.open("https://s3-us-west-2.amazonaws.com/wf-fileserver-sync/files/2018/09/218385-0FasTEWHQbizjRWsonIJ-22840991-DCF4-4667-A375-1DC5DDF3A17B.jpeg")
+cafemyriade.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+menuboard = File.open(Rails.root.join("app", "assets", "images", "menuboard.png"))
+cafemyriade.menuboard.attach(io: menuboard, filename: 'nes.png', content_type: 'image/png')
+cafemyriade.save!
+
+petitdep = Place.new(
+  name: "Le Petit Dep",
+  description: "
+  Discover Le Petit Dep, a charming retreat where each visit is a journey into delightful simplicity. Immerse yourself
+  in the welcoming atmosphere, savoring the essence of freshly brewed coffee. Every moment is a pause filled with
+  curated delights, turning your time into a sweet escape. Experience the unique charm of Le Petit Dep.",
+  location: "5125 Boul. Saint-Laurent",
+  rating: 4,
+  contact_details: "554-664-7774"
+)
+file = URI.open("https://mobile-img.lpcdn.ca/lpca/924x/r3996/d25853c2-9438-11e9-9f79-0e7266730414.jpg")
+petitdep.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+menuboard = File.open(Rails.root.join("app", "assets", "images", "menuboard.png"))
+petitdep.menuboard.attach(io: menuboard, filename: 'nes.png', content_type: 'image/png')
+petitdep.save!
+
+olimpico = Place.new(
+  name: "Café Olimpico",
+  description: "
+  Welcome to Café Olimpico, a coffee sanctuary where each cup tells a tale of exquisite flavors. Immerse yourself in the
+  inviting atmosphere, enjoying the rich aroma of freshly brewed perfection. Every moment at Café Olimpico is a curated
+  experience, turning coffee indulgence into a daily ritual. Explore the distinctive charm of Café Olimpico.",
+  location: "124 Saint-Viateur Ouest",
+  rating: 5,
+  contact_details: "554-664-7774"
+)
+file = URI.open("https://tastet.ca/wp-content/uploads/2018/07/cafe-italien-olimpico-mile-end-montreal-9.jpg")
+olimpico.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+menuboard = File.open(Rails.root.join("app", "assets", "images", "menuboard.png"))
+olimpico.menuboard.attach(io: menuboard, filename: 'nes.png', content_type: 'image/png')
+olimpico.save!
+
 puts "Creating Filters..."
 
 ingambaFilter = Filter.new(
@@ -111,6 +180,27 @@ berniebeigneFilter = Filter.new(
   place_id: berniebeigne.id, vegan: false, gluten_free: true, ambiance: "Chill", outlets: true, wifi: true
 )
 berniebeigneFilter.save!
+
+petitdepFilter = Filter.new(
+  place_id: berniebeigne.id, vegan: false, gluten_free: true, ambiance: "Chill", outlets: true, wifi: true
+)
+petitdepFilter.save!
+
+toledoFilter = Filter.new(
+  place_id: berniebeigne.id, vegan: false, gluten_free: true, ambiance: "Chill", outlets: true, wifi: true
+)
+toledoFilter.save!
+
+cafemyriadeFilter = Filter.new(
+  place_id: berniebeigne.id, vegan: false, gluten_free: true, ambiance: "Chill", outlets: true, wifi: true
+)
+cafemyriadeFilter.save!
+
+olimpicoFilter = Filter.new(
+  place_id: berniebeigne.id, vegan: false, gluten_free: true, ambiance: "Chill", outlets: true, wifi: true
+)
+olimpicoFilter.save!
+
 
 puts "Creating Test Favorites..."
 
