@@ -1,5 +1,7 @@
 
 <div class="boxstyling">
-  <h2 class="placenamemap"><%= place.name %></h2>
+  <%= link_to place_path(place), class:"placenamemap" do %>
+    <%= place.name %>
+  <% end %>
   <p class="placelocationmap"><%= place.location %></p>
 </div>

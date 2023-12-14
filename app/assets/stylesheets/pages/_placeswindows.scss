@@ -1,7 +1,5 @@
 .boxstyling{
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 5px;
+  padding: 10px 10px 0px 10px;
 
   .placenamemap{
     font-family: Playfair Display;
@@ -9,13 +7,21 @@
     font-style: bold;
     font-weight: 800;
     line-height: normal;
+    color: #343633;
   }
 
   .placelocationmap{
     font-family: Playfair Display;
-    font-size: 10px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+    margin-bottom: 0px;
+    color: #343633
   }
+}
+
+.mapboxgl-popup-content{
+ border-radius: 15px;
+ background-color: #ebe3d5;
 }
