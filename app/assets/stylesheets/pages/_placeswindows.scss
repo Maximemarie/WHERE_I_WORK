@@ -1,0 +1,21 @@
+.boxstyling{
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 5px;
+
+  .placenamemap{
+    font-family: Playfair Display;
+    font-size: 16px;
+    font-style: bold;
+    font-weight: 800;
+    line-height: normal;
+  }
+
+  .placelocationmap{
+    font-family: Playfair Display;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+}
