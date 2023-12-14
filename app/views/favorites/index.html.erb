@@ -59,7 +59,7 @@
   </div>
 </div>
 
-<h5>My Favorites :</h5>
+<h5>My Favorites </h5>
   <% @favorites.each do |favorite| %>
   <a href="<%= place_path(favorite.place) %>" >
     <div class="favs-card-container" style="background-image: url(<%= favorite.place.photos.first.url %>)">

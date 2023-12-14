@@ -11,7 +11,7 @@
 </div>
 
 
-<h5> My Upcoming Reservation :</h5>
+<h5> My Upcoming Reservation </h5>
 <div class= "place-info">
   <a href="<%= place_path(@upcoming_booking.place) %>">
   <div class="cardforplace" style="background-image: url(<%= @upcoming_booking.place.photos.first.url %>)">
@@ -32,7 +32,7 @@
 
 
 
-<h5> My Favorites :</h5>
+<h5> My Favorites </h5>
 <div class= "favcardcar">
   <% @favorites.each do |favorite| %>
     <a href="<%= place_path(favorite.place) %>">

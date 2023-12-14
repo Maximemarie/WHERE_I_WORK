@@ -34,16 +34,17 @@
 
   .see-details{
     position: absolute;
-    bottom: 0;
+    bottom: -11px;
     right: 0;
     margin: 10px;
     padding: 5px;
     border-radius: 5px;
-    color: #343633;
-    background-color: #EBE3D5;
+    color:white;
     text-decoration: underline;
-    font-size: 9px;
+    font-size: 13px;
     cursor: pointer;
+    padding-top: 10px;
+    font-family:'Public Sans', sans-serif;
   }
 
 }
