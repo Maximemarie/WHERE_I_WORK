@@ -75,6 +75,7 @@ you will book-->
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
             <div class="modal-body">
+              <p class = "filtertitle"> Reviews </p>
               <% @reviews.each do |review| %>
                 <div class ="comments">
                   <div class ="username">
@@ -86,6 +87,7 @@ you will book-->
                   </div>
                   <div class ="opinion">
                     <%= review.rating %>
+
                   </div>
                 </div>
               </div>
