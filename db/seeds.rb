@@ -182,22 +182,22 @@ berniebeigneFilter = Filter.new(
 berniebeigneFilter.save!
 
 petitdepFilter = Filter.new(
-  place_id: berniebeigne.id, vegan: false, gluten_free: true, ambiance: "Chill", outlets: true, wifi: true
+  place_id: petitdep.id, vegan: true, gluten_free: true, ambiance: "Chill", outlets: true, wifi: true
 )
 petitdepFilter.save!
 
 toledoFilter = Filter.new(
-  place_id: berniebeigne.id, vegan: false, gluten_free: true, ambiance: "Chill", outlets: true, wifi: true
+  place_id: toledo.id, vegan: true, gluten_free: true, ambiance: "Chill", outlets: true, wifi: true
 )
 toledoFilter.save!
 
 cafemyriadeFilter = Filter.new(
-  place_id: berniebeigne.id, vegan: false, gluten_free: true, ambiance: "Chill", outlets: true, wifi: true
+  place_id: cafemyriade.id, vegan: false, gluten_free: true, ambiance: "Chill", outlets: true, wifi: true
 )
 cafemyriadeFilter.save!
 
 olimpicoFilter = Filter.new(
-  place_id: berniebeigne.id, vegan: false, gluten_free: true, ambiance: "Chill", outlets: true, wifi: true
+  place_id: olimpico.id, vegan: false, gluten_free: true, ambiance: "Chill", outlets: true, wifi: true
 )
 olimpicoFilter.save!
 
