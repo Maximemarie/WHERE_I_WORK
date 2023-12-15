@@ -192,7 +192,7 @@ toledoFilter = Filter.new(
 toledoFilter.save!
 
 cafemyriadeFilter = Filter.new(
-  place_id: cafemyriade.id, vegan: false, gluten_free: true, ambiance: "Chill", outlets: true, wifi: true
+  place_id: cafemyriade.id, vegan: true, gluten_free: true, ambiance: "Chill", outlets: true, wifi: true
 )
 cafemyriadeFilter.save!
 
