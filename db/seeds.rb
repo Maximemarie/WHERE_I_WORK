@@ -20,7 +20,7 @@ Filter.destroy_all
 
 puts "Creating users..."
 
-testUser = User.new( email: "test@test.com" , password: 123456, username: "TestyBestie")
+testUser = User.new( email: "test@test.com" , password: 123456, username: "Leane")
 testUser.save!
 
 testKaren = User.new( email: "karen@test.com" , password: 123456, username: "DontcallmeKaren")
@@ -204,18 +204,21 @@ olimpicoFilter.save!
 
 puts "Creating Test Favorites..."
 
-testFav = Favorite.new(place_id: ingamba.id, user_id: testUser.id)
+testFav = Favorite.new(place_id: olimpico.id, user_id: testUser.id)
 testFav.save!
 
 secFav = Favorite.new(place_id: butterblume.id, user_id: testUser.id)
 secFav.save!
 
+thirdFav = Favorite.new(place_id: pastelrita.id, user_id: testUser.id)
+thirdFav.save!
+
 puts "Creating Test Review..."
 
-testRev = Review.new(place_id: ingamba.id, user_id: testUser.id , content: "Did NOT like this place", rating: 1)
+testRev = Review.new(place_id: ingamba.id, user_id: testBrian.id , content: "Did NOT like this place", rating: 1)
 testRev.save!
 
-testRev1 = Review.new(place_id: ingamba.id, user_id: testUser.id , content: "Love Love Looooooved it", rating: 5)
+testRev1 = Review.new(place_id: ingamba.id, user_id: testWagon.id , content: "Love Love Looooooved it", rating: 5)
 testRev1.save!
 
 testRev2 = Review.new(place_id: berniebeigne.id, user_id: testBrian.id , content: "Pretty good", rating: 4)
@@ -233,12 +236,18 @@ testRev5.save!
 testRev6 = Review.new(place_id: butterblume.id, user_id: testWagon.id , content: "Ill DEFINITELY be coming back", rating: 5)
 testRev6.save!
 
-testRev6 = Review.new(place_id: butterblume.id, user_id: testUser.id , content: "It was way too loud when I was there", rating: 2)
+testRev6 = Review.new(place_id: butterblume.id, user_id: testKaren.id , content: "It was way too loud when I was there", rating: 2)
 testRev6.save!
+
+pastRev = Review.new(place_id: petitdep.id, user_id: testUser.id , content: "Beautiful place with good muffins.", rating: 4)
+pastRev.save!
 
 puts "Creating Test Booking..."
 
-testBook = Booking.new(place_id: ingamba.id, user_id: testUser.id , time: "Tue, 02 Jan 2024 20:24:00.000000000 UTC +00:00")
+testBook = Booking.new(place_id: ingamba.id, user_id: testUser.id , time: "Fri, 08 Dec 2023 20:24:00.000000000 UTC +00:00")
 testBook.save!
+
+secBook = Booking.new(place_id: petitdep.id, user_id: testUser.id , time: "Wed, 06 Dec 2023 18:20:00.000000000 UTC +00:00")
+secBook.save!
 
 puts "Done !"
