@@ -13,6 +13,7 @@
 
 <h5> My Upcoming Reservation </h5>
 <div class= "place-info">
+<% if @upcoming_booking.present? %>
   <a href="<%= place_path(@upcoming_booking.place) %>">
   <div class="cardforplace" style="background-image: url(<%= @upcoming_booking.place.photos.first.url %>)">
     <div class = "card-place-profile">
@@ -27,6 +28,12 @@
       <%= @upcoming_booking.time.strftime("%A, %d %b %Y %l:%M %p") %>
       </div>
   </a>
+  <% else %>
+  <div>
+  <p>  -    You have no upcoming reservations.
+  </p>
+  </div>
+  <% end %>
   </div>
 </div>
 

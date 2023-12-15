@@ -218,10 +218,10 @@ puts "Creating Test Review..."
 testRev = Review.new(place_id: ingamba.id, user_id: testBrian.id , content: "Did NOT like this place", rating: 1)
 testRev.save!
 
-testRev1 = Review.new(place_id: ingamba.id, user_id: testWagon.id , content: "Love Love Looooooved it", rating: 5)
+testRev1 = Review.new(place_id: toledo.id, user_id: testWagon.id , content: "Love Love Looooooved it", rating: 5)
 testRev1.save!
 
-testRev2 = Review.new(place_id: berniebeigne.id, user_id: testBrian.id , content: "Pretty good", rating: 4)
+testRev2 = Review.new(place_id: toledo.id, user_id: testBrian.id , content: "Pretty good", rating: 4)
 testRev2.save!
 
 testRev3 = Review.new(place_id: berniebeigne.id, user_id: testKaren.id , content: "When i asked for a refund for the sandwich they told me that i had already eaten it. I will never ever eat here again", rating: 1)
