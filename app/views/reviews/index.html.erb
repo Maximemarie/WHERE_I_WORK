@@ -9,7 +9,9 @@
     <div class ="commentsreviews">
       <div class="restaurantreviews">
         <div class="restaurantcard">
-          <%= review.place.name %>
+          <%= link_to place_path(review.place), class:"placenamemap" do %>
+            <%= review.place.name %>
+          <% end %>
         </div>
       </div>
       <div class ="usernamereviews">
